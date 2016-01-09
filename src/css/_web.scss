@@ -1,0 +1,88 @@
+/* Cases Styles
+================================================================ */
+
+.cases {
+  @media #{$small-up} {
+    // 0 - 320px
+    .item {
+      padding: 0 10px 0px 0;
+      hr {
+        border-top: 1px dotted $color-grey;
+        margin: 20px 0;
+        width: 75%;
+        display: inline-block;
+      }
+      &:last-of-type {
+        hr {
+          display: none;
+        }
+      }
+      a {
+        overflow: hidden;
+        display: block;
+        font-size: 14px;
+        * {
+          cursor: pointer;
+        }
+        h4 {
+          margin: 0 0 7px 0;
+          text-transform: capitalize;
+        }
+        p {
+          margin: 5px 0;
+          font-size: 14px;          
+          color: $color-grey;
+          &.small {
+            margin: 5px 0;
+            font-size: 11px;
+            text-transform: uppercase;
+            span {
+              font-weight: $bold-weight;
+              color: $color-drk;
+            }
+          }
+        }
+        
+        .readmore {
+          //@extend .basicBtn;   
+          display: inline-block;
+          margin: 10px 0;
+          color: $color-drk;
+          border-bottom: 1px solid $color-grey;
+          padding-bottom: 2px;
+          cursor: pointer;
+          @include transition(all 180ms ease-in-out);
+        }
+        &:hover {
+          h4 {
+            color: $color-drk;
+          }
+          .readmore {
+            color: $color-primary;
+            border-color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+  @media #{$small-only} {
+    // 0 - 320px
+    .item {
+      &:last-of-type {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  @media #{$medium-up} {
+    // 480 - 800px
+  }
+  @media #{$large-up} {
+    // 800 - 1120px
+  }
+  @media #{$xlarge-up} {
+    // 1120 - 1600px
+  }
+  @media #{$xxlarge-up} {
+    // 1600 - 1920px
+  }
+}

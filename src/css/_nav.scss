@@ -1,0 +1,422 @@
+/* Header & Navigation Styles
+================================================================ */
+
+header {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  overflow: visible;
+  padding: 0;
+  width: 100%;
+  vertical-align: bottom;
+  background: #fff;
+  
+  @media #{$small-up} {
+    // 0 - 320px
+    /*ul.contact {
+      display: none;
+      margin: 0 auto;
+      padding: 10px 0 9px 0;
+      width: 100%;
+      color: $color-grey;
+      font-size: 14px;
+      font-weight: $normal-weight;
+      text-align: center;
+      text-transform: uppercase;      
+      li {
+        display: inline-block;
+        float: left;
+        margin:0 5px;
+        a {          
+          //color: $color-grey;
+          border-bottom:1px solid transparent;
+          &:hover {
+            color: $color-primary;
+            border-color: $color-secondary;
+          }
+        }
+      }
+    }*/    
+    .logo {
+      position: relative;
+      z-index: 20;
+      margin: 0 auto;
+      //display: inline-block;
+      a {
+        display: block;
+        padding: 20px 0;
+        overflow: hidden;
+        width: auto;
+        text-align: center;
+        vertical-align: bottom;
+        
+        .upheaval {
+          display:none;
+        }
+
+        .name {
+          display: inline-block;
+          color: $color-primary;
+          font-size: 28px;
+          font-weight: $bold-weight;   
+          .title {
+            display: block;
+            margin-top:4px;
+            color: $color-grey;
+            font-size: 14px;
+            font-weight: $light-weight; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+          }   
+        }
+             
+      }
+    }
+    .mainnav {
+      position: relative;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      text-align: left;
+      font-size: 0;
+      /*eliminates space between list items*/
+      line-height: 0;
+      ul,
+      li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline;
+      }
+      ul {
+        height: 0;
+        overflow: hidden;
+        display: block;
+        visibility: hidden;
+        @include opacity(0);
+      }
+      &.open {
+        @include box-shadow();
+        ul {
+          height: auto;
+          visibility: visible!important;
+          @include opacity(1);
+        }
+        #drop a {
+          figure {
+            span {
+              background: none;
+              &:before {
+                -webkit-transform: translateX(0) translateY(0) rotate(45deg);
+                -moz-transform: translateX(0) translateY(0) rotate(45deg);
+                -ms-transform: translateX(0) translateY(0) rotate(45deg);
+                -o-transform: translateX(0) translateY(0) rotate(45deg);
+                transform: translateX(2px) translateY(-1px) rotate(45deg);
+              }
+              &:after {
+                -webkit-transform: translateX(0) translateY(0) rotate(-45deg);
+                -moz-transform: translateX(0) translateY(0) rotate(-45deg);
+                -ms-transform: translateX(0) translateY(0) rotate(-45deg);
+                -o-transform: translateX(0) translateY(0) rotate(-45deg);
+                transform: translateX(2px) translateY(0) rotate(-45deg);
+              }
+            }
+          }
+        }
+      }
+      li {
+        width: 100%;
+        float: left;
+        position: relative;
+        outline: 0;
+        border: none;
+        line-height: 0;
+        a {
+          @include transition(all 180ms ease-in-out);
+          color: $color-drk;
+          margin: 0;
+          padding: 15px 0;
+          text-decoration: none;
+          font-size: 16px;
+          line-height: 1;
+          font-weight: $bold-weight;
+          margin: auto;
+          display: block;
+          text-align: center;
+          vertical-align: text-bottom;
+          /* position drop down nav directly under. must have line-height:0 */
+          position: relative;
+          //text-transform: uppercase;
+          border-bottom: 1px solid $color-border;
+          span {
+            display: block;
+            padding: 8px 25px;
+            border: none;
+          }
+          &:hover {
+            color: #fff;
+            background: $color-primary;
+            border-color: $color-border;
+          }
+          &.current {
+            color: $color-grey;
+            background: $color-egg;
+            border-color: $color-border;
+            pointer-events: none;
+            &:hover {
+              pointer-events: none;
+            }
+          }
+        }
+      }
+      #drop {
+        visibility: visible;
+        display: block;
+        width: 100%;
+        a {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          padding: 20px 0 18px 0;
+          color: #fff;
+          background: $color-primary;
+          line-height: 1;
+          font-size:15px;
+          font-weight: $bold-weight;
+          text-transform: uppercase;
+          text-align: center;
+          span.m {
+            display: inline-block;
+            -webkit-align-self: center;
+            -ms-align-self: center;
+            align-self: center;
+          }
+          figure {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+            
+            span {
+              position: absolute;
+              display: inline-block;
+              height: 2px;
+              width: 13px;
+              background: #fff;              
+              left: 0;
+              margin-top: -6px;
+              -webkit-transition: background 0.3s 0.3s;
+              -moz-transition: background 0.3s 0.3s;
+              transition: background 0.3s 0.3s;              
+              
+              &:before,
+              &:after {
+                position: absolute;
+                display: inline-block;
+                height: 2px;
+                width: 100%;
+                background: #fff;
+                content: '';
+                -webkit-transform: translateZ(0);
+                -moz-transform: translateZ(0);
+                -ms-transform: translateZ(0);
+                -o-transform: translateZ(0);
+                transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                right: 0;
+                -webkit-transform-origin: 0% 50%;
+                -moz-transform-origin: 0% 50%;
+                -ms-transform-origin: 0% 50%;
+                -o-transform-origin: 0% 50%;
+                transform-origin: 0% 50%;
+                -webkit-transition: -webkit-transform 0.3s 0.3s;
+                -moz-transition: -moz-transform 0.3s 0.3s;
+                transition: transform 0.3s 0.3s;
+              }
+              &:before {
+                top: -4px;
+              }
+              &:after {
+                top: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media #{$medium-up} {
+    // 321 - 599
+    .banner {
+      display: block;
+    }
+    .logo {
+      .wrap {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+      }
+      a {
+        display:inline-block;
+        padding: 20px 0;
+        text-align: left;
+        
+        .upheaval {
+          display:block;
+          float:left;
+          margin-right: 20px;
+          padding-right: 10px;
+          
+          img { 
+            width:60px;
+            height:60px; //specify for IE
+            @include transition(margin 260ms cubic-bezier(0.64, 0.57, 0.67, 1));
+          }
+          
+        }
+        .name {
+          margin-top:10px;
+          font-size: 25px; 
+          .title {          
+            margin: 0;
+            font-size: 13px;
+            letter-spacing: 4px;
+            //color: $color-grey; 
+          }  
+        }
+              
+      }
+    }
+  }
+  @media #{$xlarge-up} {
+    // 769 - 1024px
+    padding: 30px 0 30px 0;    
+    
+    .logo {
+      pointer-events: none;
+      margin: 0 auto;
+      top: 0px;
+      left: 0;
+      right: 0;
+      position: absolute;
+      z-index: 20;
+      display: inline-block;
+      .wrap { 
+        display: inline-block;
+        margin: 0;
+        text-align: left;
+      }
+      a {
+        pointer-events: all;
+        display: block;       
+        overflow: hidden;
+        text-align: left;
+        .upheaval { display: block; }
+        .name {
+          font-size: 28px;
+          .title {
+            font-size: 13px;
+          }
+        }
+        
+        hr {
+          width: 90%;
+        }        
+      }
+      a:hover {
+        .upheaval img { 
+          margin-top: -7px;   
+        }   
+        .title { color:$color-drk; }
+      }
+    }
+    .mainnav {
+      float:right;
+      margin-top:8px;
+      ul,
+      li {
+        display: inline;
+        height: auto;
+        visibility: visible;
+        @include opacity(1);
+      }
+      &.open {
+        @include box-shadow(none);
+      }      
+//      li:nth-child(1) a span,
+//      li:nth-child(4) a span {
+//        border-right: 1px solid $color-border;
+//      }
+//      li:last-of-type a span {
+//        border-right:none;
+//      }
+      li {
+        width: auto;
+        a {
+          padding: 10px 0;
+          font-size: 20px;
+          display: inline-block;
+          border:none;
+          color:$color-drk;
+          i {
+            display: block;
+            margin-top:5px;
+            width: 1%;
+            border-top: 2px solid transparent;
+            @include transition(all 180ms ease-in-out);
+          }
+          span {
+            display: block;
+            padding: 0 25px;
+          }
+          &:hover {
+            color:$color-primary;
+            background: none;
+            i {              
+              width: 100%;
+              border-color: $color-primary;
+            }
+          }
+          &.current {
+            color: $color-grey;
+            background: none;
+            pointer-events: none;
+            &:hover {
+              pointer-events: none;
+            }
+            i {
+              width: 100%;
+              border-top: 1px solid $color-grey;
+            }
+          }
+        }
+      }
+      #drop {
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+  @media #{$xxlarge-up} {
+    // 1025 - 9999
+    .logo {
+      a {
+        padding: 30px 25px;
+        .name {
+          font-size: 30px;
+        }
+        hr {
+          width: 80%;
+        }
+        .title {
+          font-size: 15px;
+          letter-spacing: 2px;
+        }
+        &:hover {
+          //padding: 30px 20px 20px 20px;
+        }
+      }
+    }
+  }
+}

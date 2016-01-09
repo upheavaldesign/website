@@ -1,0 +1,324 @@
+/* #Links
+================================================== */
+
+a {
+  color: $color-link;  
+  text-decoration: none;
+  outline: 0;
+  &:visited {
+    color: $color-link;
+  }
+  &:hover,
+  &:focus {
+    color: $color-hover;
+  }
+  &.tel {
+    &:hover {
+      color: $color-primary;
+      border-bottom: 1px solid $color-secondary;
+    }
+    @media #{$large-up} {
+      pointer-events: none;
+      color: $color-primary;
+    }
+  }
+}
+p a {  
+  border-bottom: 1px solid transparent;
+  line-height: inherit;
+  &:hover {
+    color: $color-hover;
+    border-bottom: 1px solid $color-hover;
+  }
+}
+.dark p a {
+  &:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+
+/* #Buttons
+================================================== */
+
+input[type="button"],
+input[type="submit"],
+button {
+  -webkit-box-align: center;
+  text-align: center;
+  cursor: pointer;
+  color: inherit;
+  /*padding: 0;*/
+  border: none;
+  border-image: none;
+  -webkit-appearance: none;
+}
+.basicBtn {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0px;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+}
+a.button,
+input.button {
+  @extend .basicBtn;
+  width: 100%;
+  text-transform: uppercase;
+  @include transition( all 100ms ease-in-out);
+  @include vendor(box-shadow, none);
+  background: none;
+  display: block;
+  padding: 12px 15px;
+  margin: 0;
+  @include rounded();
+  @include box-sizing();
+  border-width: 1px;
+  border-style: solid;
+  background: $color-button;
+  background: -moz-linear-gradient(#fff, #ddd);
+  background: -ms-linear-gradient(#fefefe, #ddd);
+  background: -o-linear-gradient(#fefefe, #ddd);
+  background: -webkit-linear-gradient(#fff, #ddd);
+  background: linear-gradient(#444, #111);
+  border-color: #222;
+  color: $color-egg!important;
+  @include vendor('text-shadow', 0 1px 0 rgba(0, 0, 0, .75));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -1px 0 rgba(255, 255, 255, .05), 0 1px 2px -1px rgba(0, 0, 0, .4);
+}
+a.button:hover {
+  color: $color-drk!important;
+  background: $color-button-hover;
+  border-color: $color-border;
+  @include vendor('text-shadow', 0 1px 0 rgba(255, 255, 255, .75));
+  @include box-shadow(inset 0 2px 5px rgba(0, 0, 0, .45));
+}
+.btn:active {
+  top: 1px;
+}
+.btn {
+  @extend .basicBtn;
+  width: 100%;
+  @include box-sizing();
+  @include rounded();
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 0; margin-bottom: 0;
+  padding: 10px 16px;
+  color: #fff!important;
+  background-color: $color-button;
+  
+  &.email {
+    width: auto;
+    box-shadow: 0 6px #b40b4d, 0 12px 5px rgba(0,0,0,0.2);
+  }
+}
+.btn:hover,
+.btn.small:hover {
+  @include opacity(1);
+  cursor: pointer;
+  @include text-shadow();
+  color: #000!important;
+  background-color: $color-button-hover;
+  @include box-shadow(0 1px 1px rgba(0, 0, 0, .35));
+}
+.btn.small {
+  font-size: 12px;
+  padding: 6px 10px;
+  border: 1px solid $color-border;
+  color: $color-grey!important;
+  background: none;
+}
+.btn.small:hover {
+  color: #fff!important;
+  background-color: $color-drk;
+  @include box-shadow(0 0 0 0);
+  @include text-shadow(0 0 0);
+  border-color: transparent;
+}
+a.btnBox {
+  @extend .basicBtn;
+  color: $color-primary;
+  padding: 8px 12px;
+  //margin: 0 5px 0 0;
+  font-size: 11px;
+  font-weight: $bold-weight;
+  border: 1px solid $color-primary;
+  text-transform: uppercase;
+  @include transition(all 180ms ease-in-out);
+  &.large {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+}
+a.btnBox:hover {
+  color: #fff;
+  background: $color-primary;
+}
+
+.dark a.btnBox {
+  color: $color-border;
+  border-color: $color-border;
+  &:hover {
+    color: #fff;
+    border-color: $color-secondary;
+    background: $color-secondary;
+  }
+}
+
+
+
+/* #Icons
+================================================== */
+
+[class^="icon-"], [class*=" icon-"] {
+  &:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 0;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+  
+  &.r:before {
+    margin:0 0 0 10px;
+  }
+}
+
+.icon-email:before { content: '\e801'; margin-right: 15px; } /* '' */
+.icon-twitter:before { content: '\e802'; } /* '' */
+.icon-instagram:before { content: '\e803'; } /* '' */
+.icon-vimeo:before { content: '\e804'; } /* '' */
+.icon-istock:before { content: '\e805'; } /* '' */
+.icon-500px:before { content: '\e806'; font-size:2.25em; } /* '' */
+.icon-right:before { content: '\e807'; } /* '' */
+.icon-left:before { content: '\e808'; } /* '' */
+.icon-spin:before { content: '\e809'; } /* '' */
+
+
+.social {
+  margin:10px auto 20px auto;
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    a {
+      padding: 20px;
+      font-size:20px;
+      color:$color-grey;
+      &:hover {
+        color:$color-hover;
+      }
+    }
+  }
+}
+
+/*
+   Animation example, for spinners
+*/
+.animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+

@@ -1,0 +1,123 @@
+/* Contact Styles
+================================================================ */
+
+.contact {
+  @media #{$small-up} {
+    // 0 - 320px   
+    .info {
+      h3, ul li, p { text-align: center; }
+      ul li {
+        margin: 0 0 3px 0;
+        //font-size: 14px;
+      }
+      hr.short {
+        display: block;
+        margin: 10px auto 20px auto;
+        width: 42px;
+      } 
+      .btns {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        a:first-of-type {
+          margin-right:10px;
+        }
+      }
+    }    
+    
+    figure.office {  
+      margin-bottom:20px;
+      width: 100%;        
+      border: 1px solid $color-border;   
+      background: #fff;
+      img {
+        height: auto;
+      }
+      ul {
+        padding: 20px 10px;
+        width: 100%;
+        border-top: 2px solid $color-primary;
+        li {
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 14px;
+          color: $color-drk;
+          &.title {
+            font-family: $font;
+            font-size: 18px;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .maparea {
+      position: relative;
+      display: none;
+      overflow: hidden;
+      height: auto;
+      .map {
+        display: none;
+      }      
+    }
+  }
+  @media #{$mobile-view} {
+    // 321 - 599px
+    padding-bottom:20px;
+  }
+  @media #{$large-up} {
+    // 600 - 768px
+    .info {
+      ul li {
+        margin: 0 0 5px 0;
+        font-size: 16px;
+      }
+      h3, ul li, p { text-align: left; }
+      
+      hr.short {
+        display: inline-block;
+        margin: 10px 0 20px 0;
+        width: 42px;
+        
+      }
+      .btns {
+        margin: 0;
+        text-align: left;
+      }
+    }
+    .maparea {
+      display: block;
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      height: 350px;
+      border: 1px solid $color-border;
+      background: #eee;
+      .map {
+        display: block;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+      }
+      figure.office {
+        position: absolute;
+        z-index: 10;
+        width: 300px;
+        top: 51%;
+        right: 6%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); 
+        @include box-shadow();
+      }
+    }
+  }
+  @media #{$xlarge-up} {
+    // 769 - 1024px
+  }
+  @media #{$xxlarge-up} {
+    // 1025 - 9999px
+  }
+}

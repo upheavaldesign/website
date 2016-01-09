@@ -1,0 +1,358 @@
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+code {
+  padding: 3px 6px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  background: #fcfcfc;
+  border: 1px solid $color-border;
+  @include rounded();
+  color: #3f8faf;
+}
+
+/* #Basic Styles
+================================================== */
+
+html {
+  height: 100%;
+  background: $color-egg;
+  &:before,
+  &:after {
+    content: '';
+    background: $color-drk;
+    position: fixed;
+    z-index: 10;
+    display: block;
+    box-sizing: border-box;
+  }
+  &:before {
+    //height: 4px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 104;
+  }
+  &:after {
+    width: 5px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+body {
+  height: 100%;
+  background: $color-egg;
+  font-family: $font;
+  font-weight: $normal-weight;
+  font-size: 15px;
+  color: $color-grey;
+  overflow-x: hidden;
+  padding: 0 5px;
+  border-top:5px solid $color-drk;
+   
+  &:before,
+  &:after {
+    content: '';
+    background: $color-drk;
+    position: fixed;
+    z-index: 10;
+    display: block;
+    box-sizing: border-box;
+  }
+  &:before {
+    //height: 4px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 13;
+  }
+  &:after {
+    width: 5px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+.blue {
+  background: $color-primary;
+  h1,
+  p {
+    color: #fff;
+  }
+}
+
+/* Basic Alginment
+================================================== */
+
+.align-left {
+  float: left;
+}
+.align-center {
+  float: none!important;
+  //display: block!important;
+  text-align: center;
+  margin: auto;
+}
+.align-right {
+  float: right!important;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+img,
+object,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+img {
+  width: auto;
+  max-width: 100%;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+hr {
+  border: none;
+  border-top: 1px solid $color-border;
+  display: block;
+  clear: both;
+  margin: 15px 0;
+  height: 0;
+}
+hr.space {
+  border: none;
+  padding: 10px 0;
+  margin: 0;
+}
+hr.space-xs {
+  border: none;
+  padding: 5px 0;
+  margin: 0;
+}
+hr.space-xl {
+  border: none;
+  padding: 25px 0;
+  margin: 0;
+}
+hr.title {
+  border: none;
+  border-top: 1px solid #e4701e;
+  margin: -30px 0 30px 0;
+  padding: 0;
+}
+hr.break {
+  border: none;
+  margin: 0!important;
+  padding: 0!important;
+}
+::selection {
+  background: $color-primary;
+  color: #fff;
+}
+::-moz-selection {
+  background: $color-primary;
+  color: #fff;
+}
+pre {
+  margin-top: 10px;
+}
+code {
+  margin-top: 10px;
+  font-size: 11px;
+  white-space: normal;
+  line-height: 1.75;
+}
+
+/* #Lists
+================================================== */
+
+ul,
+ol {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+ol {
+  list-style: decimal;
+}
+ol,
+ul.square,
+ul.circle,
+ul.disc {}
+ul.square {
+  list-style: square outside;
+}
+ul.circle {
+  list-style: circle outside;
+}
+ul.disc {
+  list-style: disc outside;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {}
+ul ul li,
+ul ol li,
+ol ol li,
+ol ul li {}
+li {
+  line-height: 18px;
+}
+ul.large li {
+  line-height: 21px;
+}
+li p {
+  line-height: 21px;
+}
+
+/* #Misc
+================================================== */
+
+.hide {
+  display: none!important;
+}
+
+/* #Foundation Adjustments
+================================================== */
+
+.left-collapse {
+  padding-left: 0;
+  padding-right: $column-gutter;
+}
+.right-collapse {
+  padding-right: 0;
+  padding-left: $column-gutter;
+}

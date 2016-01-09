@@ -1,0 +1,32 @@
+.about {
+  @media #{$small-up} {     
+    // 0 - 320px        
+    ul li {
+      margin: 3px 0;
+      font-size: 14px;
+    }
+    h1 { text-align: left; }
+    h6 {
+      margin-bottom:10px;
+      span {
+        display:block;
+        margin-top:4px;
+        font-size:14px;
+      }
+    }  
+    .photo { margin-bottom:15px;}
+  }
+  @media #{$mobile-view} {
+    // 321 - 599px
+    padding-bottom:20px;
+  }
+  @media #{$large-up} {
+    // 600 - 768px     
+  }
+  @media #{$xlarge-up} {
+    // 769 - 1024px
+  }
+  @media #{$xxlarge-up} {
+    // 1025 - 99999px
+  }
+}

@@ -64,7 +64,7 @@ module.exports = function (grunt) {
           debounceDelay: 50,
           interrupt: true
         },
-        files: ['src/js/custom.js'],
+        files: ['src/js/*.js', '!src/js/scripts.js'],
         tasks: ['uglify']
       }
     },
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
       },
       my_target: {
         files: [{
-          'dist/assets/js/scripts.js': ['src/js/jquery.min.js', 'src/js/custom.js']
+          'dist/assets/js/scripts.js': ['src/js/jquery.min.js', 'src/js/lazysizes.min.js', 'src/js/basics.js']
         }]
       }
     }
