@@ -138,30 +138,10 @@ code {
 ================================================== */
 
 html {
-  height: 100%;
-  background: $color-egg;
-  &:before,
-  &:after {
-    content: '';
-    background: $color-drk;
-    position: fixed;
-    z-index: 10;
-    display: block;
-    box-sizing: border-box;
-  }
-  &:before {
-    //height: 4px;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 104;
-  }
-  &:after {
-    width: 5px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
+  height: auto;
+  min-height: 100%;
+  background: $color-egg;  
+  overflow-x: hidden;
 }
 body {
   height: 100%;
@@ -171,31 +151,18 @@ body {
   font-size: 15px;
   color: $color-grey;
   overflow-x: hidden;
-  padding: 0 5px;
-  border-top:5px solid $color-drk;
-   
-  &:before,
-  &:after {
-    content: '';
-    background: $color-drk;
-    position: fixed;
-    z-index: 10;
-    display: block;
-    box-sizing: border-box;
-  }
-  &:before {
-    //height: 4px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 13;
-  }
-  &:after {
+} 
+::-webkit-scrollbar {
     width: 5px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-  }
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+    background: $color-primary;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
 }
 .blue {
   background: $color-primary;
@@ -355,4 +322,13 @@ li p {
 .right-collapse {
   padding-right: 0;
   padding-left: $column-gutter;
+}
+
+@media #{$large-up} {
+html {  
+  border:8px solid $color-egg;
+}
+body {
+  border:3px solid $color-border;
+} 
 }

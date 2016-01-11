@@ -2,7 +2,7 @@
 ================================================== */
 
 a {
-  color: $color-link;  
+  color: $color-link;
   text-decoration: none;
   outline: 0;
   &:visited {
@@ -23,7 +23,7 @@ a {
     }
   }
 }
-p a {  
+p a {
   border-bottom: 1px solid transparent;
   line-height: inherit;
   &:hover {
@@ -80,11 +80,6 @@ input.button {
   border-width: 1px;
   border-style: solid;
   background: $color-button;
-  background: -moz-linear-gradient(#fff, #ddd);
-  background: -ms-linear-gradient(#fefefe, #ddd);
-  background: -o-linear-gradient(#fefefe, #ddd);
-  background: -webkit-linear-gradient(#fff, #ddd);
-  background: linear-gradient(#444, #111);
   border-color: #222;
   color: $color-egg!important;
   @include vendor('text-shadow', 0 1px 0 rgba(0, 0, 0, .75));
@@ -107,14 +102,14 @@ a.button:hover {
   @include rounded();
   font-size: 14px;
   text-transform: uppercase;
-  margin-top: 0; margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 10px 16px;
   color: #fff!important;
   background-color: $color-button;
-  
   &.email {
     width: auto;
-    box-shadow: 0 6px #b40b4d, 0 12px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 6px #b40b4d, 0 12px 5px rgba(0, 0, 0, 0.2);
   }
 }
 .btn:hover,
@@ -159,7 +154,6 @@ a.btnBox:hover {
   color: #fff;
   background: $color-primary;
 }
-
 .dark a.btnBox {
   color: $color-border;
   border-color: $color-border;
@@ -170,12 +164,11 @@ a.btnBox:hover {
   }
 }
 
-
-
 /* #Icons
 ================================================== */
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   &:before {
     font-family: "fontello";
     font-style: normal;
@@ -203,35 +196,58 @@ a.btnBox:hover {
     /* Uncomment for 3D effect */
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
   }
-  
   &.r:before {
-    margin:0 0 0 10px;
+    margin: 0 0 0 10px;
   }
 }
-
-.icon-email:before { content: '\e801'; margin-right: 15px; } /* '' */
-.icon-twitter:before { content: '\e802'; } /* '' */
-.icon-instagram:before { content: '\e803'; } /* '' */
-.icon-vimeo:before { content: '\e804'; } /* '' */
-.icon-istock:before { content: '\e805'; } /* '' */
-.icon-500px:before { content: '\e806'; font-size:2.25em; } /* '' */
-.icon-right:before { content: '\e807'; } /* '' */
-.icon-left:before { content: '\e808'; } /* '' */
-.icon-spin:before { content: '\e809'; } /* '' */
-
-
+.icon-email:before {
+  content: '\e801';
+  margin-right: 15px;
+}
+.icon-twitter:before {
+  content: '\e802';
+}
+.icon-instagram:before {
+  content: '\e803';
+}
+.icon-vimeo:before {
+  content: '\e804';
+}
+.icon-istock:before {
+  content: '\e805';
+}
+.icon-500px:before {
+  content: '\e806';
+  font-size: 2.25em;
+}
+.icon-right:before {
+  content: '\e807';
+}
+.icon-left:before {
+  content: '\e808';
+}
+.icon-spin:before {
+  content: '\e809';
+}
 .social {
-  margin:10px auto 20px auto;
-  li {
-    display: inline-block;
-    margin: 0 5px;
-    a {
-      padding: 20px;
-      font-size:20px;
-      color:$color-grey;
-      &:hover {
-        color:$color-hover;
+  @media #{$small-up} {
+    margin: 10px auto 20px auto;
+    li {
+      display: inline-block;
+      margin: 0 4px;
+      a {
+        padding: 11px;
+        font-size: 20px;
+        color: $color-grey;
+        &:hover {
+          color: $color-hover;
+        }
       }
+    }
+  }
+  @media #{$large-up} {
+    li a {
+      padding: 20px;
     }
   }
 }
@@ -239,6 +255,7 @@ a.btnBox:hover {
 /*
    Animation example, for spinners
 */
+
 .animate-spin {
   -moz-animation: spin 2s infinite linear;
   -o-animation: spin 2s infinite linear;
@@ -253,7 +270,6 @@ a.btnBox:hover {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -268,7 +284,6 @@ a.btnBox:hover {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -283,7 +298,6 @@ a.btnBox:hover {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -298,7 +312,6 @@ a.btnBox:hover {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -313,7 +326,6 @@ a.btnBox:hover {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -321,4 +333,3 @@ a.btnBox:hover {
     transform: rotate(359deg);
   }
 }
-
