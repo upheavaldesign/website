@@ -1,0 +1,71 @@
+{
+  "portrait": [
+    {
+      "imgs": [
+        "bishop-creme",
+        "marksherman",
+        "donnalee",
+        "troybundy",
+        "kilotone"
+      ]
+      }
+      ],  
+  "music": [
+    {
+      "imgs": [
+        "bishop-door",
+        "nonstop",
+        "dopethought",        
+        "iame-rain"
+      ]
+      }
+      ],
+  "studio": [
+    {
+      "imgs": [  
+        "bishop-louder",
+        "iame-studio", 
+        "rocketone",
+        "danza-cap",
+        "danza-cheek",
+        "arjay-hat",        
+        "marcus"
+      ]
+      }
+      ],
+  "creative": [
+    {
+      "imgs": [           
+        "sally",
+        "sallywool",        
+        "smiles",
+        "isabella-reading"  ,
+        "amber-grieves",
+         "seagrass"
+      ]
+      }
+      ],
+  "athletic": [
+    {
+      "imgs": [        
+        "michelle-turf",
+        "michelle-curl",
+        "dumbells",
+        "pushup"        
+      ]
+      }
+      ],
+  "ladies": [
+    {
+      "imgs": [
+        "gold",
+        "redballoon",        
+        "stripes",        
+        "vanida-face",   
+        "vanida-feathers",
+        "robot"
+      ]
+      }
+      ]
+
+}
