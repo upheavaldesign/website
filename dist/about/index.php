@@ -5,8 +5,8 @@ include_once( $root."/templates/header.php"); ?>
 	<!--Jon-->
 	<div class="row">
 		<article class="columns large-8">
-			<h1 class="show-for-large-up">Jeremiah Deasey<span style="margin-left:15px;">Photographer &amp; Designer</span></h1>
-			<h1 class="hide-for-large-up">About</h1>
+			<h1>Jeremiah Deasey<span style="margin-left:15px;">Photographer &amp; Designer</span></h1>
+			<!--<h1 class="hide-for-large-up">About</h1>-->
 			<hr class="space show-for-large-up"/>
 			<p>I believe in quality craftsmanship. Each of my projects are unique. My approach is objective, diligent, meticulous, and driven. Developing functional solutions that meet/exceed modern standards in design, I take pride in all projects, and will work hard to make certain that you do as well.</p>
 			<p>Typically, I create for small and medium businesses, and I also collaborate with various web and design agencies. I enjoy jumping into a team effort, lending support as a motivated freelancer.</p>
@@ -20,7 +20,7 @@ include_once( $root."/templates/header.php"); ?>
 					<h5>Visual Design &amp; UI<span>Styling, Interactive, Components</span></h5>
 				</div>
 				<div class="columns large-6">
-				<h5>Brand, Graphic Design<span>Photoshop, Illustrator</span></h5>
+				<h5>Graphic Design, Branding<span>Photoshop, Illustrator</span></h5>
 				<h5>Photography<span>Studio Portraits, Stock Contributor</span></h5>
 				<h5>Print<span>Layout, Templating, Preflight</span></h5>
 				</div>
@@ -44,7 +44,7 @@ include_once( $root."/templates/header.php"); ?>
 			<h3>Esteemed Partnerships</h3>
 			<p>Past efforts, across industries, have allowed me to collaborate with some great folks through the years.</p>
 		</div>
-		<hr class="space-xl">
+		<hr class="space-xl show-for-large-up">
 		<div class="columns">
 			<figure class="columns xlarge-3 small-6"> <a href="http://adidas.com/us/" target="_blank">
 				<h6>Adidas</h6>
