@@ -160,11 +160,14 @@ a.close {
         vertical-align: middle;
         padding: 10px;
         border: none;
+        @include opacity(0); 
+        @include transition(all 160ms ease-in-out);
+        
         span {
           display: block;
           height: 24px;
           width: 24px;
-          //background: $color-drk;
+          background: rgba(0,0,0,.1);
           &:before,
           &:after {
             position: absolute;
@@ -186,7 +189,7 @@ a.close {
         &:hover {
           border: none;
           span {            
-            background: $color-primary;
+            //background: rgba(0,0,0,.25);
             &:before,
             &:after {
               background: #fff;
@@ -224,8 +227,7 @@ a.close {
         @include transition(all 160ms ease-in-out);
          span {          
           height: 34px;
-          width: 34px;
-          background: rgba(0,0,0,.05);
+          width: 34px;          
          }
       }
       &:hover .close {
@@ -271,7 +273,7 @@ a.close {
          span {          
           height: 60px;
           width: 60px;
-          background: transparent;
+         //background: transparent;
          }
       }
     }

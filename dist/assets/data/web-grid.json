@@ -1,7 +1,6 @@
 {
   "statedclearly": [
     {
-      "client": "Stated Clearly",
       "title": "Stated Clearly",
       "scope": "PHP, HTML5, Responsive",
       "url": "http://statedclearly.com",
@@ -9,6 +8,7 @@
       "desc": "",
       "testimony": "",
       "thumb": "",
+      "grid": "large-6",
       "screens": [
         "",
         "",
@@ -23,7 +23,6 @@
     ],
     "oregonruns": [
     {
-      "client": "OregonRuns",
       "title": "OregonRuns",
       "scope": "",
       "url": "",
@@ -46,7 +45,6 @@
     ],
     "jon-mcmullen": [
     {
-      "client": "Jon J. McMullen",
       "title": "Jon J. McMullen",
       "scope": "HTML5, Responsive",
       "url": "",
@@ -69,7 +67,6 @@
     ],
   "hart-wagner": [
     {
-      "client": "Hart Wagner",
       "title": "Hart Wagner. Trial Attorneys",
       "scope": "WordPress, Branding, Photography",
       "url": "http://hartwagner.com",
@@ -92,7 +89,6 @@
     ],
   "flexlegal": [
     {
-      "client": "Flex Legal",
       "title": "Flex Legal",
       "scope": "HTML5, Responsive, Branding, Photography",
       "url": "",
@@ -115,7 +111,6 @@
     ],
   "lehmann": [
     {
-      "client": "Lehmann Court Reporting",
       "title": "Lehmann Court Reporting",
       "scope": "",
       "url": "",

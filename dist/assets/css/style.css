@@ -2754,7 +2754,7 @@ li p {
   a h4,
   a h5,
   a h6 {
-    cursor: auto;
+    cursor: pointer;
   }
 
   h1 {
@@ -3884,6 +3884,7 @@ header {
     text-align: center;
   }
   footer .contactarea .email a {
+    cursor: pointer;
     display: inline-block;
   }
   footer .contactarea .email a h2 {
@@ -4203,166 +4204,106 @@ header {
 
 /* Web Grid Styles
 ================================================================ */
-.web {
+#web .page {
   padding: 20px;
 }
-.web .thumb:last-child {
+#web .thumb:last-child {
   float: left;
 }
 @media only screen {
-  .web .thumb {
-    padding: 0;
-  }
-  .web .thumb:after {
-    content: "";
+  #web .statement {
     display: block;
-    padding-bottom: 100%;
-  }
-  .web .frame {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    border: 4px solid #fff;
-  }
-  .web .frame.notloaded {
-    pointer-events: none;
-  }
-  .web .frame.notloaded figcaption {
-    background-color: #ededed;
-  }
-  .web .frame.notloaded img {
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    opacity: 0;
-  }
-  .web .frame img {
-    width: 100%;
-    height: auto;
-  }
-  .web .frame figcaption {
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    background-color: rgba(58, 212, 171, 0);
-  }
-  .web .frame figcaption .caption {
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    opacity: 0;
-  }
-  .web .frame figcaption .caption h5 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    pointer-events: none;
-    padding: 0 10px;
-    color: #fff;
-    opacity: inherit;
-    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #fff;
+    line-height: 1.5em;
     text-align: center;
-    font-size: 20px;
+  }
+  #web .statement .desc h1 {
+    margin: 0;
+    font-size: 44px;
     font-weight: 300;
-    line-height: 1.1;
-    -webkit-text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
-    -moz-text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    -moz-transform: translateY(-50%) translateX(-50%);
-    -ms-transform: translateY(-50%) translateX(-50%);
-    -o-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
+    line-height: 1.25;
+    text-align: center;
+    color: #888;
   }
-  .web .frame:hover figcaption {
-    background-color: rgba(58, 212, 171, 0.5);
-    -webkit-transition: background-color 240ms linear;
-    -moz-transition: background-color 240ms linear;
-    -ms-transition: background-color 240ms linear;
-    -o-transition: background-color 240ms linear;
-    transition: background-color 240ms linear;
+  #web .statement .desc h1 a {
+    display: inline-block;
+    color: #3399ff;
   }
-  .web .frame:hover figcaption .caption {
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
+  #web .statement .desc h1 a i {
+    display: block;
+    margin-top: 5px;
+    width: 1%;
+    border-top: 2px solid transparent;
+    -webkit-transition: all 180ms ease-in-out;
+    -moz-transition: all 180ms ease-in-out;
+    -ms-transition: all 180ms ease-in-out;
+    -o-transition: all 180ms ease-in-out;
+    transition: all 180ms ease-in-out;
   }
-}
-@media only screen and (min-width: 600px) {
-  .web .frame {
-    -webkit-transition: transform 120ms linear;
-    -moz-transition: transform 120ms linear;
-    -ms-transition: transform 120ms linear;
-    -o-transition: transform 120ms linear;
-    transition: transform 120ms linear;
+  #web .statement .desc h1 a:hover {
+    background: none;
   }
-  .web .frame img {
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
+  #web .statement .desc h1 a:hover i {
+    width: 100%;
+    border-color: #3399ff;
   }
-  .web .frame figcaption {
-    -webkit-transition: background-color 400ms linear;
-    -moz-transition: background-color 400ms linear;
-    -ms-transition: background-color 400ms linear;
-    -o-transition: background-color 400ms linear;
-    transition: background-color 400ms linear;
+  #web .client a {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 50px auto;
+    padding: 50px;
+    border-bottom: 1px solid #ededed;
   }
-  .web .frame figcaption .caption {
-    -webkit-transition: opacity 400ms linear;
-    -moz-transition: opacity 400ms linear;
-    -ms-transition: opacity 400ms linear;
-    -o-transition: opacity 400ms linear;
-    transition: opacity 400ms linear;
+  #web .client:last-of-type a {
+    border: none;
   }
-  .web .frame figcaption .caption h5 {
-    padding: 0 15px;
+  #web .client h5 {
+    color: #888;
     font-size: 20px;
-    font-weight: 700;
+    margin-bottom: 30px;
   }
-  .web .frame:hover {
-    z-index: 100;
-    -webkit-transform: scale(1.1) translateZ(0);
-    -moz-transform: scale(1.1) translateZ(0);
-    -ms-transform: scale(1.1) translateZ(0);
-    -o-transform: scale(1.1) translateZ(0);
-    transform: scale(1.1) translateZ(0);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+  #web .client h2 {
+    color: #222222;
+    font-size: 36px;
   }
-  .web .frame:hover figcaption {
-    background-color: rgba(51, 153, 255, 0.5);
-    -webkit-transition: background-color 240ms linear;
-    -moz-transition: background-color 240ms linear;
-    -ms-transition: background-color 240ms linear;
-    -o-transition: background-color 240ms linear;
-    transition: background-color 240ms linear;
+  #web .client h2 span {
+    display: block;
+    margin-top: 6px;
+    color: #888;
+    font-size: .5em;
   }
-  .web .frame:hover figcaption .caption {
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
+  #web .client p {
+    margin-top: 60px;
+    color: #222222;
   }
-}
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .web .thumb {
-    width: 20%;
+  #web .client .client-logo {
+    padding: 40px 0;
   }
-}
-@media (min-width: 1280px) {
-  .web .frame figcaption .caption h5 {
-    padding: 0 25px;
-    font-size: 27px;
+  #web .client.statedclearly h2 {
+    color: #cb4545;
+  }
+  #web .client.oregonruns h2 {
+    color: #222;
+  }
+  #web .client.jon-mcmullen h2 {
+    color: #112340;
+  }
+  #web .client.hart-wagner h2 {
+    color: #430000;
+  }
+  #web .client.flexlegal h2 {
+    color: #a4cd3d;
+  }
+  #web .client.lehmann h2 {
+    color: #004a65;
   }
 }
 
 /* Photo Grid Styles
 ================================================================ */
-#photo {
+#photo .page {
   padding: 20px;
 }
 #photo .thumb:last-child {
@@ -4602,11 +4543,20 @@ a.close {
     vertical-align: middle;
     padding: 10px;
     border: none;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-transition: all 160ms ease-in-out;
+    -moz-transition: all 160ms ease-in-out;
+    -ms-transition: all 160ms ease-in-out;
+    -o-transition: all 160ms ease-in-out;
+    transition: all 160ms ease-in-out;
   }
   .modal .panel .close span {
     display: block;
     height: 24px;
     width: 24px;
+    background: rgba(0, 0, 0, 0.1);
   }
   .modal .panel .close span:before, .modal .panel .close span:after {
     position: absolute;
@@ -4634,9 +4584,6 @@ a.close {
   }
   .modal .panel .close:hover {
     border: none;
-  }
-  .modal .panel .close:hover span {
-    background: #3399ff;
   }
   .modal .panel .close:hover span:before, .modal .panel .close:hover span:after {
     background: #fff;
@@ -4689,7 +4636,6 @@ a.close {
   .modal .panel .close span {
     height: 34px;
     width: 34px;
-    background: rgba(0, 0, 0, 0.05);
   }
   .modal .panel:hover .close {
     -webkit-opacity: 1;
@@ -4733,7 +4679,6 @@ a.close {
   .modal .panel .close span {
     height: 60px;
     width: 60px;
-    background: transparent;
   }
 }
 

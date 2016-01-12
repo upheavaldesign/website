@@ -62,5 +62,5 @@ function searchArray($needle, $haystack, $strict = false) {
 <link rel="stylesheet" type="text/css"  href="<?php echo $css; ?>"/>
 <?php include_once( $root."/templates/meta.php"); ?>
 </head>
-<body>
+<body id="<?php echo $parent; ?>">
 <?php include_once( $root."/templates/nav.php"); ?>
