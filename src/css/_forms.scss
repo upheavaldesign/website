@@ -1,0 +1,220 @@
+/* Forms
+================================================== */
+
+@media #{$small-up} {
+    form {
+        margin-bottom: 20px;
+        .headline {
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+    }
+    fieldset {
+        margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea,
+    select {
+        display: block;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 9px;
+        width: 100%;
+        outline: none;
+        font-size: 12px;
+        color: #888;
+        border: 1px solid #d8d8d8;
+        background: #fff;
+        @include box-shadow(0px 1px 1px 0px rgba(180, 180, 180, 0.1));
+        @include rounded(2px);
+    }
+    select {
+        padding: 0;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+        border: 1px solid #c8c8c8;
+        color: #606060;
+    }
+    textarea {
+        min-height: 60px;
+    }
+    label,
+    legend {
+        display: block;
+        font-weight: bold;
+        font-size: 13px;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+    .checkbox {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
+        padding: 10px 15px 10px 10px;
+        width: 100%;
+        color: $color-primary;
+        font-size: 14px;
+        line-height: 1;
+        @include rounded(3px);
+        border: 1px solid $color-border;
+        background-color: $color-egg;
+        @include gradient(#fff 50%, $color-egg 100%);
+        label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            margin: 0;
+            padding: 17px 0 18px 0;
+            float: left;
+            width: 100%;
+            cursor: pointer;
+        }
+        .tag {
+            position: relative;
+            display: block;
+            //float: left;
+            padding: 0 0 0 50px;
+            font-size: 14px;
+            font-weight: $normal_weight;
+            color: $color-text-dark;
+            pointer-events: all;
+        }
+    }
+    input[type="checkbox"] {
+        display: none;
+        & + span {
+            position: relative;
+            float: left;
+            display: inline-block;
+            //margin-top: 10px;
+            padding: 4px 6px;
+            background-color: #fafafa;
+            border: 1px solid #cacece;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+            @include rounded(3px);
+            @include flexbox();
+            align-items: center;
+            justify-content: center;
+            &:after {
+                @include opacity(0);
+                content: '\2714';
+                font-size: 18px;
+                color: #fff;
+            }
+        }
+    }
+    .checkbox:hover {
+        span {
+            background-color: $color-grey;
+            &:after {
+                @include opacity(1);
+                //color: $color-gold;
+            }
+        }
+    }
+    input[type="checkbox"]:checked + span {
+        background-color: $color-primary;
+        &:after {
+            @include opacity(1);
+        }
+    }
+    label span,
+    legend span {
+        font-weight: normal;
+        font-size: 13px;
+        color: #444;
+    }
+    /* Contact Form
+==========================*/
+    .spam {
+        left: -4000px;
+        position: absolute;
+    }
+    input[type=text]:focus,
+    textarea:focus {
+        border: 1px solid $color-primary;
+        color: #333;
+    }
+    .field textarea {
+        //    max-width: 97%;
+        //    min-width: 97%;
+        height: 160px;
+    }
+    //  .field input {
+    //    width: 240px;
+    //  }
+    .field:focus {
+        border: 1px solid #ddd;
+    }
+    .field label span {
+        color: #ea1c1c;
+    }
+    .field .validation-error,
+    .field .validation-error:focus {
+        border: 1px solid #f2c4c2;
+        background: #ffeceb;
+    }
+}
+
+
+/* Alert Boxes
+================================================================ */
+
+.success-message,
+#error-message,
+#required-message,
+#email-message {
+    display: none;
+}
+
+.notification {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    @include rounded(3px);
+    p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-primary;
+    }
+    span {
+        font-weight: $bold_weight;
+    }
+    &.error {
+        background-color: #ffe9e9;
+        border: 1px solid #fbc4c4;
+        padding: 14px 18px;
+        @include gradient(#FFE9E9 0%, #FFF2F2 100%);
+        p {
+            color: #de5959;
+        }
+    }
+    &.success {
+        background-color: #F2FAFE;
+        border: 1px solid #E9F7FE;
+        padding: 14px 18px;
+        @include gradient(#E9F7FE 0%, #F2FAFE 100%);
+    }
+    &.notice {
+        background-color: $color-egg;
+        color: $color-primary;
+        border: 1px solid $color-border;
+        padding: 12px 18px 0 18px;
+        @include gradient($color-border 0%, $color-egg 100%);
+    }
+}
+
+@media #{$mobile-view} {}
+
+@media #{$large-up} {}
+
+@media #{$xlarge-up} {}
+
+@media #{$xxlarge-up} {}

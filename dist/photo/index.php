@@ -1,17 +1,16 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
 include_once( $root."/templates/header.php");
-$JSON = 'http://'.$_SERVER['HTTP_HOST'].'/assets/data/photos.json';
+$JSON = $REQUEST_PROTOCOL.'://'.$_SERVER['HTTP_HOST'].'/assets/data/photos.json';
 $photos = getJSON($JSON);
 $route = getProjectUri(); //check for slug'
 $route404 = false;
-if($route != '') {	
+if($route != '') {
 	/*check if slug exists*/
-	if ( !searchArray($route, $photos) ){		
+	if ( !searchArray($route, $photos) ){
 		/*if project does not exist, close modal*/
 		$route404 = true;
-	}	
-}	
-
+	}
+}
 
 function calcGrid($count)
 {
@@ -29,33 +28,33 @@ function calcGrid($count)
 		return 'unit-8';
 	} else if($count > 8){
 		return 'xlarge-2';
-	} 
+	}
 }
 ?>
 
-<section id="<?php echo $parent; ?>" class="page">
+<section class="page">
 	<div class="grid" data-error="<?php echo $route404; ?>">
 		<div class="row">
-			<?php 
+			<?php
 		$dir = '/assets/photo/';
-		$i = 0; 
-			
+		$i = 0;
+
 		foreach ($photos as $k => $group){
-			$group = $group[0]['imgs'];	
-			$cat = $k;			
-			foreach ($group as $key => $img){ 
+			$group = $group['imgs'];
+			$cat = $k;
+			foreach ($group as $key => $img){
 			$gridSize = calcGrid(count($group));
 			?>
-			<article id="<?php echo ++$i; ?>" class="columns <? echo $gridSize; ?> large-3 small-6 thumb"> <a href="/photo/<?php echo $img; ?>"
+			<article id="<?php echo ++$i; ?>" class="columns <?php echo $gridSize; ?> large-3 small-6 thumb"> <a href="/photo/<?php echo $img; ?>"
 					data-slug="<?php echo $img; ?>"
 					data-count="<?php echo $i; ?>"
 				>
 				<figure class="frame">
 					<?php if($route == ''){ ?>
-					<img class="lazyload"					
-						data-src="<?php print $dir.$img.'_thumb.jpg'; ?>"
+					<img class="lazyload"
+						data-src="<?php print $dir.$img.'-thumb.jpg'; ?>"
 						src="/assets/ui/pixel.png"
-						alt="<?php echo $img; ?>">
+						alt="<?php echo $img; ?>"/>
 					<?php } ?>
 					<?php /*?><img class="lazyload"
 						data-srcset="<?php echo $dir.$photo['img'].'_thumb-s.jpg 200w, '
@@ -66,9 +65,8 @@ function calcGrid($count)
 						alt="<?php echo $photo['title']; ?>"><?php */?>
 				</figure>
 				</a> </article>
-			<?php } ?>
-			<?php } ?>
-			<!--End of Grid--> 
+			<?php } } ?>
+			<!--End of Grid-->
 		</div>
 	</div>
 </section>

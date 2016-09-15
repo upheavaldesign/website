@@ -1,0 +1,27 @@
+/* Screen Slider Styles
+================================================================ */
+
+@media #{$small-up} {
+  .screens {
+    display: block;
+    background: $color-drk;
+    figure {
+      display: block;
+      img {
+        margin: auto;
+      }
+    }
+  }
+  .statedclearly .screens {
+    background: #cb4545;
+  }
+}
+@media #{$large-up} {}
+@media #{$xlarge-up} {
+  .screens {
+    padding: 60px;
+  }
+}
+@media #{$xxlarge-up} {}
+@media (min-width: 1280px) {}
+@media (min-width: 1600px) {}

@@ -1,6 +1,8 @@
 .about {
+    
   @media #{$small-up} {     
-    // 0 - 320px        
+    // 0 - 320px      
+    padding-bottom: 0;
     ul li {
       margin: 3px 0;
       font-size: 14px;
@@ -13,18 +15,21 @@
         margin-top:4px;
         font-size:14px;
       }
-    }  
-    .photo { margin-bottom:15px;}
+    }      
   }
   @media #{$mobile-view} {
     // 321 - 599px
     //padding-bottom:20px;
   }
   @media #{$large-up} {
-    // 600 - 768px     
+    // 600 - 768px   
+      padding-top: 0;
+      
   }
   @media #{$xlarge-up} {
     // 769 - 1024px
+      padding-top: 10px;
+      padding-bottom: 10px;
   }
   @media #{$xxlarge-up} {
     // 1025 - 99999px

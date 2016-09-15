@@ -1,3 +1,48 @@
+/* Fix FOUT caused by font-kit loading delay */
+
+.wf-loading {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    nav a,
+    ul li,
+    figcaption,
+    .caption,
+    .logo {
+        visibility: hidden;
+    }
+    nav * {
+        /*this removes the css transition that appears on new page load*/
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+    }
+}
+
+.wf-active,
+.wf-inactive {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    nav a,
+    ul li,
+    figcaption,
+    .caption,
+    .logo {
+        visibility: visible;
+    }
+}
+
 /* #Reset & Basics (Inspired by E. Meyers)
 ================================================== */
 
@@ -82,14 +127,15 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
+
 article,
 aside,
 details,
@@ -101,234 +147,297 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
+
 body {
-  line-height: 1;
+    line-height: 1;
 }
+
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
+
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none;
+    content: '';
+    content: none;
 }
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 code {
-  padding: 3px 6px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  background: #fcfcfc;
-  border: 1px solid $color-border;
-  @include rounded();
-  color: #3f8faf;
+    padding: 3px 6px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    background: #fcfcfc;
+    border: 1px solid $color-border;
+    @include rounded();
+    color: #3f8faf;
 }
+
 
 /* #Basic Styles
 ================================================== */
 
 html {
-  height: auto;
-  min-height: 100%;
-  background: $color-egg;  
-  overflow-x: hidden;
+    height: auto;
+    min-height: 100%;
+    background: $color-egg;
+    overflow-x: hidden;
 }
+
 body {
-  height: 100%;
-  background: $color-egg;
-  font-family: $font;
-  font-weight: $normal-weight;
-  font-size: 15px;
-  color: $color-grey;
-  overflow-x: hidden;
-} 
+    height: 100%;
+    background: $color-egg;
+    font-family: $font;
+    font-weight: $normal-weight;
+    font-size: 15px;
+    color: $color-text-normal;
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
     padding: 20px;
     margin: 20px;
-    cursor: pointer;
+    cursor: -webkit-grab;
 }
+
 ::-webkit-scrollbar-thumb {
     background: $color-primary;
+    cursor: -webkit-grab;
 }
+
 ::-webkit-scrollbar-track {
     background: transparent;
 }
+
 .blue {
-  background: $color-primary;
-  h1,
-  p {
-    color: #fff;
-  }
+    background: $color-primary;
+    h1,
+    p {
+        color: #fff;
+    }
 }
+
 
 /* Basic Alginment
 ================================================== */
 
 .align-left {
-  float: left;
+    float: left;
 }
+
 .align-center {
-  float: none!important;
-  //display: block!important;
-  text-align: center;
-  margin: auto;
+    float: none!important;
+    //display: block!important;
+    text-align: center;
+    margin: auto;
 }
+
 .align-right {
-  float: right!important;
+    float: right!important;
 }
+
 .text-left {
-  text-align: left;
+    text-align: left;
 }
+
 .text-center {
-  text-align: center;
+    text-align: center;
 }
+
 .text-right {
-  text-align: right;
+    text-align: right;
 }
+
 img,
 object,
 video {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
+
 img {
-  width: auto;
-  max-width: 100%;
-  border: 0;
-  -ms-interpolation-mode: bicubic;
+    width: auto;
+    max-width: 100%;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
 }
+
 hr {
-  border: none;
-  border-top: 1px solid $color-border;
-  display: block;
-  clear: both;
-  margin: 15px 0;
-  height: 0;
+    border: none;
+    border-top: 1px solid $color-border;
+    display: block;
+    clear: both;
+    margin: 15px 0;
+    height: 0;
+    &.xl {
+        margin: 30px 0;
+    }
 }
+
 hr.space {
-  border: none;
-  padding: 10px 0;
-  margin: 0;
+    border: none;
+    padding: 10px 0;
+    margin: 0!important;
 }
+
 hr.space-xs {
-  border: none;
-  padding: 5px 0;
-  margin: 0;
+    border: none;
+    padding: 5px 0;
+    margin: 0!important;
 }
+
 hr.space-xl {
-  border: none;
-  padding: 25px 0;
-  margin: 0;
+    border: none;
+    padding: 25px 0;
+    margin: 0!important;
 }
+
 hr.title {
-  border: none;
-  border-top: 1px solid #e4701e;
-  margin: -30px 0 30px 0;
-  padding: 0;
+    border: none;
+    border-top: 1px solid #e4701e;
+    margin: -30px 0 30px 0;
+    padding: 0;
 }
+
 hr.break {
-  border: none;
-  margin: 0!important;
-  padding: 0!important;
+    border: none;
+    margin: 0!important;
+    padding: 0!important;
 }
+
 ::selection {
-  background: $color-primary;
-  color: #fff;
+    background: $color-primary;
+    color: #fff;
 }
+
 ::-moz-selection {
-  background: $color-primary;
-  color: #fff;
+    background: $color-primary;
+    color: #fff;
 }
+
 pre {
-  margin-top: 10px;
+    margin-top: 10px;
 }
+
 code {
-  margin-top: 10px;
-  font-size: 11px;
-  white-space: normal;
-  line-height: 1.75;
+    margin-top: 10px;
+    font-size: 11px;
+    white-space: normal;
+    line-height: 1.75;
 }
+
 
 /* #Lists
 ================================================== */
 
 ul,
 ol {
-  margin: 0;
+    margin: 0;
 }
+
 ul {
-  list-style: none;
+    list-style: none;
 }
+
 ol {
-  list-style: decimal;
+    list-style: decimal;
 }
+
 ol,
 ul.square,
 ul.circle,
 ul.disc {}
+
 ul.square {
-  list-style: square outside;
+    list-style: square outside;
 }
+
 ul.circle {
-  list-style: circle outside;
+    list-style: circle outside;
 }
+
 ul.disc {
-  list-style: disc outside;
+    list-style: disc outside;
 }
+
 ul ul,
 ul ol,
 ol ol,
 ol ul {}
+
 ul ul li,
 ul ol li,
 ol ol li,
 ol ul li {}
+
 li {
-  line-height: 18px;
+    line-height: 18px;
 }
+
 ul.large li {
-  line-height: 21px;
+    line-height: 21px;
 }
+
 li p {
-  line-height: 21px;
+    line-height: 21px;
 }
+
 
 /* #Misc
 ================================================== */
 
 .hide {
-  display: none!important;
+    display: none!important;
 }
+
 
 /* #Foundation Adjustments
 ================================================== */
 
 .left-collapse {
-  padding-left: 0;
-  padding-right: $column-gutter;
+    padding-left: 0;
+    padding-right: $column-gutter;
 }
+
 .right-collapse {
-  padding-right: 0;
-  padding-left: $column-gutter;
+    padding-right: 0;
+    padding-left: $column-gutter;
 }
 
 @media #{$large-up} {
-html {  
-  border:8px solid $color-egg;
+    html {
+        border: 8px solid $color-egg;
+    }
+    body {
+        border: 3px solid $color-border;
+    }
+    hr.row {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    hr.xl {
+        margin: 50px 0;
+    }
 }
-body {
-  border:3px solid $color-border;
-} 
+
+@media #{$xlarge-up} {
+    hr.row {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
 }

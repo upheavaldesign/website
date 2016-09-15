@@ -1,71 +1,61 @@
 {
-  "portrait": [
-    {
-      "imgs": [
-        "bishop-creme",
-        "marksherman",
-        "donnalee",
-        "troybundy",
-        "kilotone"
-      ]
-      }
-      ],  
-  "music": [
-    {
-      "imgs": [
-        "bishop-door",
-        "nonstop",
+  "portraits": {
+    "imgs": [
+        "kilotone",
+        "iame_rain",
+        
         "dopethought",        
-        "iame-rain"
+        "bishop_creme" 
       ]
-      }
-      ],
-  "studio": [
-    {
-      "imgs": [  
-        "bishop-louder",
-        "iame-studio", 
-        "rocketone",
-        "danza-cap",
-        "danza-cheek",
-        "arjay-hat",        
-        "marcus"
-      ]
-      }
-      ],
-  "creative": [
-    {
-      "imgs": [           
-        "sally",
-        "sallywool",        
-        "smiles",
-        "isabella-reading"  ,
-        "amber-grieves",
-         "seagrass"
-      ]
-      }
-      ],
-  "athletic": [
-    {
-      "imgs": [        
-        "michelle-turf",
-        "michelle-curl",
-        "dumbells",
-        "pushup"        
-      ]
-      }
-      ],
-  "ladies": [
-    {
+  },  
+    "group3": {
+      "imgs": [                 
+        "bishop_louder",
+          "danza_cap",
+          "nonstop",
+        "danza_cheek",
+        "bishop_door"
+          ]
+  },
+    "group2": {
       "imgs": [
+          "seagrass",
+        "smiles", 
+           "amber_grieves",
+          "isabella_reading",
+        "sallywool",
+        "amber_trail" 
+          ]
+  },  
+    "group4": {
+      "imgs": [
+         
+         "iame_studio",
+        "donnalee",
+          "marcus",
+        "troybundy",
+        "arjay_hat"
+          ]
+  },
+            "athletic": {
+      "imgs": [
+        
+        "michelle_turf",
+        "michelle_curl",
+        "dumbells",
+        "pushup"
+          ]
+  },
+        "group5": {
+      "imgs": [            
+        
         "gold",
-        "redballoon",        
-        "stripes",        
-        "vanida-face",   
-        "vanida-feathers",
-        "robot"
-      ]
-      }
-      ]
-
+        
+        "stripes",
+          "redballoon",
+        "vanida_face",
+        "vanida_feathers",
+        "robot"        
+          ]
+  }
 }

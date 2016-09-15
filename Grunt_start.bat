@@ -1,4 +1,9 @@
 @echo off
-call F:\MorePrograms\Ruby21-x64\bin\setrbvars.bat
-cd /d F:\MorePrograms\xampp\htdocs\UPHEAVAL
+:: fire up Ruby
+call C:\Ruby22-x64\bin\setrbvars.bat
+
+:: set Directory to same as this batch file
+cd /d %~dp0
+
+:: run Grunt command
 grunt

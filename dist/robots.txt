@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /flyers/
+Disallow: /images/
+Disallow: /other/
+Disallow: /photos/
+Disallow: /portfolio/
+Disallow: /privacy/
+Disallow: /skate/
+Disallow: /uploads/
+Disallow: /clothing/

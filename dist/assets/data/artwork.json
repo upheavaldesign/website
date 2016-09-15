@@ -1,0 +1,20 @@
+{
+  "group1": {
+    "imgs": [  
+        "absolutely",         
+        "wildcard_tour", 
+        "burncounty",
+        "gamestaz",
+        "koshir"                      
+      ]
+  },
+  "group2": {
+    "imgs": [
+        "overtime_bluecollar",
+        "knothead",       
+        "wildcard_shootinggallery",        
+        "sandpeople",
+        "overtime" 
+      ]
+  }
+}
