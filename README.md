@@ -1,5 +1,5 @@
-# UPHEAVAL 2016 #
-http://upheavaldesign.com
+# UPHEAVAL #
+https://www.upheavaldesign.com
 
 
 ### Development Setup
