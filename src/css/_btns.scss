@@ -1,23 +1,26 @@
 /* #Links
 ================================================== */
-
 a {
     color: $color-link;
     text-decoration: none;
     outline: 0;
+
     &:visited {
         color: $color-link;
     }
+
     &:hover,
     &:focus {
         color: $color-hover;
     }
+
     &.tel {
         &:hover {
             color: $color-primary;
             border-bottom: 1px solid $color-secondary;
         }
-        @media #{$large-up} {
+
+        @include breakpoint(large up) {
             pointer-events: none;
             color: $color-primary;
         }
@@ -27,6 +30,7 @@ a {
 p a {
     border-bottom: 1px solid transparent;
     line-height: inherit;
+
     &:hover {
         color: $color-hover;
         border-bottom: 1px solid $color-hover;
@@ -50,162 +54,41 @@ button {
     -webkit-box-align: center;
     text-align: center;
     cursor: pointer;
-    color: inherit;
     /*padding: 0;*/
     border: none;
     border-image: none;
     -webkit-appearance: none;
+    outline:0;
 }
 
-.basicBtn {
+.btn {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px 16px;
+    width: auto;
     font-size: 12px;
     font-weight: normal;
     line-height: 1;
     letter-spacing: 0px;
-    display: inline-block;
+    text-transform: uppercase;
     text-decoration: none;
-    vertical-align: middle;
-    text-align: center;
-}
-
-a.button,
-input.button {
-    @extend .basicBtn;
-    width: 100%;
-    text-transform: uppercase;
-    @include transition( all 100ms ease-in-out);
-    @include vendor(box-shadow, none);
-    background: none;
-    display: block;
-    padding: 12px 15px;
-    margin: 0;
-    @include rounded();
-    @include box-sizing();
-    border-width: 1px;
-    border-style: solid;
-    background: $color-button;
-    border-color: #222;
-    color: $color-egg!important;
-    @include vendor('text-shadow', 0 1px 0 rgba(0, 0, 0, .75));
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -1px 0 rgba(255, 255, 255, .05), 0 1px 2px -1px rgba(0, 0, 0, .4);
-}
-
-a.button:hover {
-    color: $color-drk!important;
-    background: $color-button-hover;
-    border-color: $color-border;
-    @include vendor('text-shadow', 0 1px 0 rgba(255, 255, 255, .75));
-    @include box-shadow(inset 0 2px 5px rgba(0, 0, 0, .45));
-}
-
-.btn:active {
-    top: 1px;
-}
-
-.btn {
-    @extend .basicBtn;
-    width: auto;
-    //@include box-sizing();
-    @include rounded(2px);
-    font-size: 12px;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 10px 16px;
-    color: #fff!important;
+    text-align: center;      
+    color: #fff;
     background-color: $color-button;
-}
+    @include rounded(2px);
 
-.btn:hover {
-    @include text-shadow();
-    //color: #000!important;
-    background-color: $color-button-hover;
-    @include box-shadow(0 1px 1px rgba(0, 0, 0, .35));
-}
-
-.btn.small {
-    font-size: 12px;
-    padding: 6px 10px;
-    border: 1px solid $color-border;
-    color: $color-grey!important;
-    background: none;
-}
-
-.btn.small:hover {
-    color: #fff!important;
-    background-color: $color-drk;
-    @include box-shadow(0 0 0 0);
-    @include text-shadow(0 0 0);
-    border-color: transparent;
-}
-
-a.btnBox {
-    @extend .basicBtn;
-    color: $color-primary;
-    padding: 8px 12px;
-    //margin: 0 5px 0 0;
-    font-size: 11px;
-    font-weight: $bold-weight;
-    border: 1px solid $color-primary;
-    text-transform: uppercase;
-    @include transition(all 180ms ease-in-out);
-    &.large {
-        padding: 12px 16px;
-        font-size: 16px;
-    }
-}
-
-a.btnBox:hover {
-    color: #fff;
-    background: $color-primary;
-}
-
-.dark a.btnBox {
-    color: $color-border;
-    border-color: $color-border;
     &:hover {
-        color: #fff;
-        border-color: $color-secondary;
-        background: $color-secondary;
+        @include text-shadow();
+        color:#fff;
+        background-color: $color-button-hover;
+        @include box-shadow(0 1px 1px rgba(0, 0, 0, .35));
+    }
+
+    &:active {
+        top: 1px;
     }
 }
-
-.btn-hollow {
-    @extend .basicBtn;
-    display: inline-block;
-    padding: 12px 15px;
-    margin: 0;
-    width: auto;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #fff;
-    color: #fff;
-    background: none;
-    text-transform: uppercase;
-    vertical-align: middle;
-    @include transition(all 160ms ease);
-    @include vendor(box-shadow, none);
-    &.dark {
-        margin-top: 20px;
-        border-color: $color-drk;
-        color: $color-drk;
-        font-weight: $bold_weight;
-    }
-    i:before {
-        @include opacity(0);
-        font-size: 9px;
-        margin: 1px 0 0 -4px;
-        vertical-align: top;
-        @include transition(all 160ms ease);
-    }
-    &:hover {
-        i:before {
-            @include opacity(1);
-            margin-left: 10px;
-        }
-    }
-}
-
 
 /* #Icons
 ================================================== */
@@ -239,6 +122,7 @@ a.btnBox:hover {
         /* Uncomment for 3D effect */
         /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
     }
+
     &.r:before {
         margin: 0 0 0 10px;
     }
@@ -283,44 +167,52 @@ a.btnBox:hover {
 }
 
 .social {
-    @media #{$small-up} {
-        margin: 10px auto 20px auto;
-        li {
-            display: inline-block;
-            margin: 0 4px;
-            a {
-                padding: 11px;
-                font-size: 20px;
-                color: $color-grey;
-                &:hover {
-                    color: $color-hover;
-                }
+    margin: 10px auto 20px auto;
+
+    li {
+        display: inline-block;
+        margin: 0 4px;
+
+        a {
+            padding: 11px;
+            font-size: 20px;
+            color: $color-grey;
+
+            &:hover {
+                color: $color-hover;
             }
         }
     }
-    @media #{$large-up} {
+
+    @include breakpoint(large up) {
         li a {
             padding: 20px;
         }
     }
 }
 
-@media #{$large-up} {
+@include breakpoint(large up) {
     a.line {
+        position: relative;
         display: inline-block;
         width: auto;
-        i {
-            display: block;
-            margin-top: 5px;
-            width: 1%;
-            border-top: 2px solid transparent;
-            @include transition(all 180ms ease-in-out);
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background-color: $color-primary;
+            @include transition(width 180ms ease-in-out);
         }
+
         &:hover {
             background: none;
-            i {
+
+            &:after {
                 width: 100%;
-                border-color: $color-primary;
             }
         }
     }

@@ -1,510 +1,424 @@
 /* Header & Navigation Styles
 ================================================================ */
-
-header {
+header#masthead {
     position: relative;
     z-index: 10;
     display: inline-block;
     overflow: visible;
     padding: 0;
     width: 100%;
+    height: 80px;
     vertical-align: bottom;
+    border-bottom: 1px solid $color-border;
     background: #fff;
-    @media #{$small-up} {
-        // 0 - 320px
-        /*ul.contact {
-      display: none;
-      margin: 0 auto;
-      padding: 10px 0 9px 0;
-      width: 100%;
-      color: $color-grey;
-      font-size: 14px;
-      font-weight: $normal-weight;
-      text-align: center;
-      text-transform: uppercase;      
-      li {
-        display: inline-block;
-        float: left;
-        margin:0 5px;
-        a {          
-          //color: $color-grey;
-          border-bottom:1px solid transparent;
-          &:hover {
-            color: $color-primary;
-            border-color: $color-secondary;
-          }
-        }
-      }
-    }*/
-        .logo {
-            //display: inline-block;
-            position: relative;
-            z-index: 1;
-            //width: auto;
-            height: 70px;
-            margin: 0;
-            border-bottom: 1px solid $color-border;
-            .columns {
-                padding: 0;
-            }
-            a {
-                display: inline-block;
-                padding: 15px 25px;
-                overflow: hidden;
-                width: auto;
-                text-align: center;
-                vertical-align: bottom;
-                .upheaval {
-                    display: none;
+
+    &.open {
+        #nav-icon {
+            //background-color: $color-border;
+
+            span {
+                background-color: transparent;
+
+                &:before {
+                    top: 0;
+                    background-color: $color-button-hover;
+                    @include transform(rotate(45deg));
                 }
-                .name {
-                    display: inline-block;
-                    color: $color-primary;
-                    font-size: 24px;
-                    font-weight: $bold-weight;
-                    .title {
-                        display: block;
-                        margin-top: 2px;
-                        color: $color-grey;
-                        font-size: 14px;
-                        font-weight: $light-weight;
-                        letter-spacing: 1px;
-                        text-transform: uppercase;
-                    }
+
+                &:after {
+                    top: 0;
+                    width: 100%;
+                    background-color: $color-button-hover;
+                    @include transform(rotate(-45deg));
                 }
             }
         }
-        #drop {
+
+        .primary-nav ul {
             visibility: visible;
-            display: block;
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            right: 0;
-            border-left: 1px solid $color-border;
-            width: 70px;
-            height: 70px;
-            a {
+            @include opacity(1);
+            height: auto;
+
+            li {
+                height: 60px;
+            }
+        }
+    }
+
+    .logo {
+        z-index: 2;
+        position: relative;
+        float: left;
+        margin: 0;
+        height: 80px;
+
+        a {
+            display: inline-block;
+            padding: 20px 24px 18px 16px;
+            overflow: hidden;
+            width: auto;
+            text-align: center;
+            vertical-align: bottom;
+
+            .upheaval {
                 display: block;
-                overflow: hidden;
-                border: none;
-                width: 100%;
-                height: 100%;
-                figure {
-                    display: inline-block;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    padding: 22px;
-                    @include transform(translateY(-50%) translateX(-50%));
-                    span {
-                        position: absolute;
-                        display: inline-block;
-                        height: 2px;
-                        width: calc(100% - 15px);
-                        background: $color-drk;
-                        top: 50%;
-                        left: 50%;
-                        @include transform(translateY(-50%) translateX(-50%));
-                        @include transition(all 0.3s linear);
-                        &:before,
-                        &:after {
-                            position: absolute;
-                            display: inline-block;
-                            right: 0;
-                            height: 2px;
-                            width: 100%;
-                            background: $color-drk;
-                            content: '';
-                            @include transform(translateZ(0));
-                            @include transform-origin(0% 50%);
-                            @include transition( transform 0.3s linear);
-                            -webkit-backface-visibility: hidden;
-                            backface-visibility: hidden;
-                        }
-                        &:before {
-                            top: -6px;
-                        }
-                        &:after {
-                            top: 6px;
-                        }
-                    }
+                float: left;
+                margin-right: 10px;
+                padding-right: 10px;
+
+                img {
+                    width: 42px;
+                    height: 42px; //specify for IE            
                 }
             }
-            &.open a {
-                //background: $color-border;
-                border: 6px solid $color-border;
-                border-bottom: 0;
-                figure {
-                    span {
-                        background: none;
-                        &:before {
-                            //background: #fff;              
-                            @include transform(translateX(3px) translateY(-4px) rotate(45deg));
-                        }
-                        &:after {
-                            //background: #fff;
-                            @include transform(translateX(3px) translateY(4px) rotate(-45deg));
-                        }
-                    }
+
+            .name {
+                display: inline-block;
+                color: $color-primary;
+                font-size: 24px;
+                font-weight: $bold;
+
+                .title {
+                    display: block;
+                    margin-top: 2px;
+                    color: $color-grey;
+                    font-size: 14px;
+                    font-weight: $thin;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
                 }
             }
         }
-        .main {
+    }
+
+    #nav-icon {
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 80px;
+        text-align: center;
+        border-left: 1px solid $color-border;
+        background-color: transparent;
+
+        span {
             position: relative;
-            z-index: 1;
-            padding: 0;
-            margin: 0;
-            //overflow: hidden;
+            display: inline-block;
+            height: 2px;
+            width: 24px;
+            background-color: $color-dark;
+            @include transition(background-color 180ms ease-in);
+
+            &:after,
+            &:before {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                width: 24px;
+                background-color: $color-dark;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                @include transform(translateZ(0));
+                @include transition(transform 180ms ease-in);
+            }
+
+            &:before {
+                top: -5px;
+            }
+
+            &:after {
+                top: 5px;
+                width: 18px;
+            }
+        }
+
+    }
+
+
+    .primary-nav {
+        position: relative;
+        z-index: 1;
+        padding: 0;
+        margin: auto;
+
+        ul {
+            visibility: hidden;
+            @include opacity(0);
+            overflow: hidden;
+            display: block;
+            width: 100%;
+            height: 0;
             text-align: left;
             font-size: 0;
             /*eliminates space between list items*/
             line-height: 0;
-            ul,
-            li {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                display: inline;
-            }
-            ul {
-                height: 0;
-                overflow: hidden;
-                display: block;
-                visibility: hidden;
-                @include opacity(0);
-            }
-            &.open {
-                border: 6px solid $color-border;
-                //@include box-shadow();
-                ul {
-                    height: auto;
-                    visibility: visible!important;
-                    @include opacity(1);
-                }
-            }
-            li {
-                width: 100%;
-                height: 0;
-                @include opacity(0);
-                float: left;
-                position: relative;
-                outline: 0;
-                border: none;
-                line-height: 0;
-                @include transition(none);
-                &.show {
-                    height: auto;
-                    @include opacity(1);
-                    @include transition(all 180ms ease-in-out);
-                    a {
-                        color: $color-drk;
-                        @include transition(all 180ms 60ms ease-in-out);
-                    }
-                }
-                &:first-of-type a {
-                    border-top: none;
-                }
-                a {
-                    @include transition(none);
-                    color: transparent;
-                    margin: 0;
-                    padding: 15px 0;
-                    text-decoration: none;
-                    font-size: 16px;
-                    line-height: 1;
-                    font-weight: $bold-weight;
-                    margin: auto;
-                    display: block;
-                    text-align: center;
-                    vertical-align: text-bottom;
-                    /* position drop down nav directly under. must have line-height:0 */
-                    position: relative;
-                    //text-transform: uppercase;
-                    border-top: 1px solid $color-border;
-                    border-bottom: 1px solid darken($color-border, 10%);
-                    span {
-                        display: block;
-                        padding: 6px 25px;
-                        border: none;
-                    }
-                    &:hover {
-                        color: #fff;
-                        background: $color-primary;
-                        border-color: $color-border;
-                    }
-                    &.current {
-                        color: $color-grey;
-                        background: $color-egg;
-                        border-color: $color-border;
-                        pointer-events: none;
-                        &:hover {
-                            pointer-events: none;
-                        }
-                    }
-                    &.active {
-                        color: $color-primary;
-                        background: #f9f9f9;                      
-                    }
-                }
-            }
-            /*#drop {
-        visibility: visible;
-        display: block;
-        width: 100%;
-        a {
-          position: relative;
-          display: block;
-          overflow: hidden;
-          padding: 15px 0 13px 0;
-          color: #fff;
-          background: $color-primary;
-          line-height: 1;
-          font-size:17px;
-          font-weight: $bold-weight;
-          text-transform: uppercase;
-          text-align: center;
-          span.m {
-            display: inline-block;
-          }
-          figure {
-            position: relative;
-            display: inline-block;
-            margin-right: 20px;
-            
-            span {
-              position: absolute;
-              display: inline-block;
-              height: 2px;
-              width: 13px;
-              background: #fff;              
-              left: 0;
-              margin-top: -7px;
-              @include transition(background 0.3s linear);
-              
-              &:before,
-              &:after {
-                position: absolute;
-                right: 0;
-                display: inline-block;
-                height: 2px;
-                width: 100%;
-                background: #fff;
-                content: '';
-                @include transform(translateZ(0)); 
-                @include transform-origin(0% 50%);
-                @include transition(transform 0.3s linear);
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-              }
-              &:before {
-                top: -4px;
-              }
-              &:after {
-                top: 4px;
-              }
-            }
-          }
+            list-style: none;
+            //border-top: 1px solid $color-border;
         }
-      }*/
+
+        li {
+            float: left;
+            position: relative;
+            width: 100%;
+            height: 0;
+            outline: 0;
+            border: none;
+            line-height: 0;
+            @include transition(height 360ms ease-in-out);
+
+            // &:first-of-type a {
+            //     border-top: none;
+            // }
+
+            a {
+                position: relative;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                font-size: 16px;
+                font-weight: $bold;
+                text-decoration: none;
+                text-align: center;
+                line-height: 1;
+                color: $color-dark;
+                border-bottom: 1px solid $color-border;
+                background-color: #fff;
+
+                span {
+                    display: block;
+                    padding: 6px 0;
+                    border: none;
+                }
+
+                &:hover {
+                    color: #fff;
+                    background: $color-primary;
+                    border-color: $color-border;
+                }
+
+                &.current {
+                    font-weight: $thin;
+                    color: $color-grey;
+                    background: $color-egg;
+                    border-color: $color-border;
+                    pointer-events: none;
+
+                    &:hover {
+                        pointer-events: none;
+                    }
+                }
+
+                &.active {
+                    color: $color-primary;
+                    background: #f9f9f9;
+                }
+            }
         }
     }
-    @media #{$medium-up} {
-        // 321 - 599
+
+
+    @include breakpoint(medium up) {
         .banner {
             display: block;
         }
-        .logo {
-            a {
-                .upheaval {
-                    display: block;
-                    float: left;
-                    margin-right: 10px;
-                    padding-right: 10px;
-                    img {
-                        width: 42px;
-                        height: 42px; //specify for IE            
-                    }
-                }
-                .name {
-                    text-align: left;
-                    margin-top: 2px;
-                    font-size: 26px;
-                    .title {
-                        margin: 0;
-                        font-size: 13px;
-                        letter-spacing: .18em;
-                        //color: $color-grey; 
-                    }
+
+        .logo a {
+            .upheaval {
+                margin-right: 10px;
+                padding-right: 10px;
+
+                img {
+                    width: 42px;
+                    height: 42px; //specify for IE            
                 }
             }
+
+            .name {
+                text-align: left;
+                margin-top: 2px;
+                font-size: 26px;
+
+                .title {
+                    margin: 0;
+                    font-size: 13px;
+                    letter-spacing: .18em;
+                    //color: $color-grey; 
+                }
+            }
+        }
+
+    }
+
+    @include breakpoint(large down) {
+        .grid-container {
+            padding: 0;
         }
     }
-    @media #{$xlarge-up} {
-        // 600 - 768px
-        padding: 30px 0 22px 0;
-        border-bottom: 1px solid $color-border;
-        .logo {
-            pointer-events: none;
-            position: absolute;
-            z-index: 20;
-            margin: 0 auto;
-            top: 0px;
-            left: 0;
-            right: 0;
-            height: auto;
-            border: none;
-            .wrap {
-                display: inline-block;
-                margin: 0;
-                text-align: left;
-            }
-            a {
-                pointer-events: all;
+
+    @include breakpoint(large up) {
+        .logo a {
+            padding: 20px 24px 18px 24px;
+        }
+    }
+
+    @include breakpoint(xlarge up) {
+        padding: 0;
+        height: 110px;
+
+        .grid-container {
+            position: relative;
+            height: 100%;
+        }
+
+        .logo a {
+            pointer-events: all;
+            display: block;
+            overflow: hidden;
+            padding: 24px;
+            text-align: left;
+
+            .upheaval {
                 display: block;
-                overflow: hidden;
-                text-align: left;
-                .upheaval {
-                    display: block;
-                    img {
-                        width: 60px;
-                        height: 60px; //specify for IE
-                        @include transition(margin 260ms cubic-bezier(0.64, 0.57, 0.67, 1));
-                    }
-                }                
-                .name {
-                    margin-top: 10px;
-                    font-size: 32px;
-                    .title {
-                        font-size: 14px;
-                        letter-spacing: .28em;
-                    }
+
+                img {
+                    width: 60px;
+                    height: 60px; //specify for IE
+                    @include transition(margin 260ms cubic-bezier(0.64, 0.57, 0.67, 1));
                 }
-                hr {
-                    width: 90%;
+            }
+
+            .name {
+                margin-top: 10px;
+                font-size: 32px;
+
+                .title {
+                    font-size: 14px;
+                    letter-spacing: .28em;
                 }
-                &:hover {
-                    .upheaval img {
-                        margin-top: -7px;
-                    }
-                    .title {
-                        color: $color-drk;
-                    }
+            }
+
+            hr {
+                width: 90%;
+            }
+
+            &:hover {
+                .upheaval img {
+                    margin-top: -7px;
+                }
+
+                .title {
+                    color: $color-dark;
                 }
             }
         }
-        #drop {
+
+
+        #nav-icon {
             visibility: hidden;
             display: none;
         }
-        .main {
+
+        .primary-nav {
             float: right;
-            margin-top: -3px;
-            margin-right: 10px;
-            ul,
-            li {
-                display: inline;
-                height: auto;
+            margin-right: 16px;
+            height: 100%;
+
+            ul {
                 visibility: visible;
                 @include opacity(1);
+                height: 100%;
+                border: 0;
             }
+
             li {
                 width: auto;
+                height: 100%;
+
                 a {
-                    padding: 10px 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0 24px;
                     font-size: 18px;
-                    display: inline-block;
+                    color: $color-dark;
                     border: none;
-                    color: $color-drk;
-                    i {
-                        display: block;
-                        margin-top: 5px;
-                        width: 1%;
-                        border-top: 2px solid transparent;
-                        @include transition(all 180ms ease-in-out);
-                    }
+
                     span {
-                        display: block;
-                        padding: 0 25px;
-                    }
-                    &:hover {
-                        color: $color-primary;
-                        background: none;
-                        i {
-                            width: 100%;
-                            border-color: $color-primary;
+                        position: relative;
+                        display: inline-block;
+                        margin-top: -8px;
+                        padding: 0;
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: -8px;
+                            left: 0;
+                            width: 0;
+                            height: 2px;
+                            background-color: $color-primary;
+                            @include transition(width 180ms ease-in-out);
                         }
                     }
+
+                    &:hover {
+                        color: $color-primary;
+                        background-color: transparent;
+
+                        span:after {
+                            width: 100%;
+                        }
+                    }
+
                     &.current {
                         color: $color-grey;
                         background: none;
                         pointer-events: none;
+
                         &:hover {
                             pointer-events: none;
                         }
-                        i {
+
+                        span:after {
                             width: 100%;
-                            border-top: 1px solid $color-grey;
+                            height: 1px;
+                            background-color: $color-grey;
                         }
                     }
+
                     &.active {
                         color: $color-primary;
-                        background: none;                      
+                        background: none;
                     }
-                    
+
                 }
             }
         }
     }
-//    @media #{$xlarge-up} {
-//        // 769 - 1024px
-//        .logo a {
-//            .upheaval {
-//                margin-right: 20px;
-//            }
-//            .name .title {
-//                letter-spacing: .24em;
-//            }
-//            &:hover {
-//                .upheaval img {
-//                    margin-top: -7px;
-//                }
-//                .title {
-//                    color: $color-drk;
-//                }
-//            }
-//        }
-//        .main {
-//            margin-top: -5px;
-//            li a {
-//                padding: 10px 0;
-//                font-size: 20px;
-//            }
-//        }
-//    }
-    @media #{$xxlarge-up} {
-        // 1025 - 9999
-        padding: 30px 0 35px 0;
-        .logo {
-            a {
-                padding: 30px 25px;
-                .name {
-                    font-size: 30px;
-                    .title {
-                        font-size: 15px;
-                        letter-spacing: .17em;
-                    }
-                }
-                hr {
-                    width: 80%;
-                }
-                &:hover {
-                    //padding: 30px 20px 20px 20px;
+
+    @include breakpoint(xxlarge up) {
+
+        .logo a {
+
+            .name {
+                font-size: 30px;
+
+                .title {
+                    font-size: 15px;
+                    letter-spacing: .17em;
                 }
             }
         }
-        .main {
-            margin-top: 8px;
-        }
+
     }
 }

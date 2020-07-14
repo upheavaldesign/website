@@ -1,6 +1,6 @@
 /* Fix FOUT caused by font-kit loading delay */
-
 .wf-loading {
+
     h1,
     h2,
     h3,
@@ -15,6 +15,7 @@
     .logo {
         visibility: hidden;
     }
+
     nav * {
         /*this removes the css transition that appears on new page load*/
         -webkit-transition: none !important;
@@ -27,6 +28,7 @@
 
 .wf-active,
 .wf-inactive {
+
     h1,
     h2,
     h3,
@@ -189,7 +191,6 @@ code {
 
 /* #Basic Styles
 ================================================== */
-
 html {
     height: auto;
     min-height: 100%;
@@ -201,7 +202,7 @@ body {
     height: 100%;
     background: $color-egg;
     font-family: $font;
-    font-weight: $normal-weight;
+    font-weight: $normal;
     font-size: 15px;
     color: $color-text-normal;
     overflow-x: hidden;
@@ -223,14 +224,6 @@ body {
     background: transparent;
 }
 
-.blue {
-    background: $color-primary;
-    h1,
-    p {
-        color: #fff;
-    }
-}
-
 
 /* Basic Alginment
 ================================================== */
@@ -240,14 +233,14 @@ body {
 }
 
 .align-center {
-    float: none!important;
+    float: none !important;
     //display: block!important;
     text-align: center;
     margin: auto;
 }
 
 .align-right {
-    float: right!important;
+    float: right !important;
 }
 
 .text-left {
@@ -271,7 +264,8 @@ video {
 }
 
 img {
-    width: auto;
+    width: 100%;
+    height: auto;
     max-width: 100%;
     border: 0;
     -ms-interpolation-mode: bicubic;
@@ -284,40 +278,37 @@ hr {
     clear: both;
     margin: 15px 0;
     height: 0;
-    &.xl {
-        margin: 30px 0;
+
+    &.break {
+        border: none;
+        margin: 0 !important;
+        padding: 0 !important;
     }
-}
 
-hr.space {
-    border: none;
-    padding: 10px 0;
-    margin: 0!important;
-}
+    &.space {
+        border: none;
+        padding: 10px 0;
+        margin: 0 !important;
+    }
 
-hr.space-xs {
-    border: none;
-    padding: 5px 0;
-    margin: 0!important;
-}
+    &.space-xs {
+        border: none;
+        padding: 5px 0;
+        margin: 0 !important;
+    }
 
-hr.space-xl {
-    border: none;
-    padding: 25px 0;
-    margin: 0!important;
-}
+    &.space-xl {
+        border: none;
+        padding: 25px 0;
+        margin: 0 !important;
+    }
 
-hr.title {
-    border: none;
-    border-top: 1px solid #e4701e;
-    margin: -30px 0 30px 0;
-    padding: 0;
-}
-
-hr.break {
-    border: none;
-    margin: 0!important;
-    padding: 0!important;
+    &.title {
+        border: none;
+        border-top: 1px solid #e4701e;
+        margin: -30px 0 30px 0;
+        padding: 0;
+    }
 }
 
 ::selection {
@@ -358,11 +349,6 @@ ol {
     list-style: decimal;
 }
 
-ol,
-ul.square,
-ul.circle,
-ul.disc {}
-
 ul.square {
     list-style: square outside;
 }
@@ -374,16 +360,6 @@ ul.circle {
 ul.disc {
     list-style: disc outside;
 }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {}
-
-ul ul li,
-ul ol li,
-ol ol li,
-ol ul li {}
 
 li {
     line-height: 18px;
@@ -397,47 +373,26 @@ li p {
     line-height: 21px;
 }
 
-
 /* #Misc
 ================================================== */
-
 .hide {
-    display: none!important;
+    display: none !important;
 }
 
-
-/* #Foundation Adjustments
-================================================== */
-
-.left-collapse {
-    padding-left: 0;
-    padding-right: $column-gutter;
-}
-
-.right-collapse {
-    padding-right: 0;
-    padding-left: $column-gutter;
-}
-
-@media #{$large-up} {
+@include breakpoint(large up) {
     html {
         border: 8px solid $color-egg;
     }
+
     body {
         border: 3px solid $color-border;
     }
-    hr.row {
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    hr.xl {
-        margin: 50px 0;
-    }
 }
 
-@media #{$xlarge-up} {
-    hr.row {
-        margin-top: 60px;
-        margin-bottom: 60px;
+@include breakpoint(xlarge up) {
+    .xlarge-third {
+        width: 33%;
+        margin-right: 0;
+        margin-left: 0;
     }
-}
+} 
