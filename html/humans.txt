@@ -1,0 +1,30 @@
+/* Humans */	
+
+	Jeremiah Deasey
+	Design, Front End, Programming, Photography
+	Email: sales@upheavaldesign.com
+	Web: https://www.upheavaldesign.com
+	Instagram: https://www.instagram.com/upheavaldesign
+	Location: Portland, OR, USA
+
+	Adam Keys
+	Graphic Design, Photography
+	Email: adam@upheavaldesign.com
+	Instagram: https://www.instagram.com/upheavaltm
+	Location: Spokane, WA, USA
+	
+	
+
+/* Colophon*/
+
+	Art & Content:
+	Abobe Illustrator, Abobe Photoshop
+
+	Components:
+	PHP, HTML5, CSS3, JS, JSON, SVG
+	
+	Development:
+	Visual Studio Code, Sass, Grunt, Git, FileZilla
+
+	Typography:
+	Adelle-Sans - https://typekit.com/fonts/adelle-sans
