@@ -1,6 +1,6 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
 include_once( $root."/templates/header.php");
-$web = json_decode(file_get_contents('../assets/data/web.json'), true);
+$web = json_decode(file_get_contents('../data/web.json'), true);
 ?>
 <section class="page-heading">
 	<div class="grid-container">
@@ -24,7 +24,7 @@ $web = json_decode(file_get_contents('../assets/data/web.json'), true);
 							<figcaption><span class="client-title"><?php echo $client['title']; ?></span>
 								<span class="client-year"><?php echo $client['year']; ?></span></figcaption>
 							<div class="img-wrap fill"><img class="lazyload"
-									data-src="<?php echo $path.$client['thumb']; ?>.jpg" src="/assets/ui/pixel.png"
+									data-src="<?php echo $path.$client['thumb']; ?>.jpg" src="/assets/gfx/pixel.png"
 									alt="<?php echo $client['thumb-alt']; ?>"></div>
 						</figure>
 						<div class="summary">
@@ -39,7 +39,7 @@ $web = json_decode(file_get_contents('../assets/data/web.json'), true);
 		</div>
 	</section>
 
-	<hr class="hide-for-large">
+	<hr class="my-2">
 
 	<?php include $root."/web/tpl-agency.php"; ?>
 </article>
@@ -53,8 +53,8 @@ $web = json_decode(file_get_contents('../assets/data/web.json'), true);
 			</a>
 		</div>
 		<div class="cell show-for-large">
-			<h4 class="call">I first became a <em>webmaster</em> in 1999, nowadays it's a bit different.</h4>
-			<h4 class="call">Today I design &amp; develop mobile-friendly websites with responsive best practices.</h4>			
+			<h4 class="call">I first became a <em>webmaster</em> in 1999, it's a bit more complicated nowadays.</h4>
+			<h4 class="call">Today I design &amp; develop mobile-friendly websites using responsive best practices.</h4>			
 			<a class="line action" href="/contact/" title="Contact">
 				Let's Create Something Great
 			</a>

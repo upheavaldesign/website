@@ -25,7 +25,7 @@ include_once( $root."/templates/header.php"); ?>
 					meticulous, and driven. Developing functional solutions that meet/exceed modern standards in design,
 					I
 					take pride in all projects, and will work hard to make certain that you do as well.</p>
-				<p>Often, I work directly with small and medium businesses, occasionally I collaborate with teams to
+				<p>Often I work directly with small and medium businesses, occasionally I collaborate with teams to
 					lend
 					support as a motivated freelancer.</p>
 				<p>Just as you choose a designer, I select my clients, and accept projects that are exciting. Expect a
@@ -37,26 +37,26 @@ include_once( $root."/templates/header.php"); ?>
 					<div class="cell large-9">
 						<ul class="skills">
 							<li>
-								<h5>Front-End Development<span>HTML5, Sass, JS, Grunt, Git</span></h5>
+								<h5>Front-End Development <span>HTML5, Sass, JS, Grunt, Git</span></h5>
 							</li>
 							<li>
-								<h5>Server-Side Programming<span>PHP, WordPress, MVC</span></h5>
+								<h5>Back-End Programming <span>PHP, WordPress, MVC</span></h5>
 							</li>
 							<li>
-								<h5>Visual Design &amp; UI<span>Styling, Interactive, Components</span></h5>
+								<h5>Visual Design &amp; UI <span>Styling, Interactive, Components</span></h5>
 							</li>
 						</ul>
 					</div>
 					<div class="cell large-9">
 						<ul class="skills">
 							<li>
-								<h5>Branding, Graphic Design<span>Photoshop, Illustrator</span></h5>
+								<h5>Branding, Graphic Design <span>Photoshop, Illustrator, Figma</span></h5>
 							</li>
 							<li>
-								<h5>Photography<span>Commercial Portraits, Stock Contributor</span></h5>
+								<h5>Photography <span>Commercial Portraits, Stock Contributor</span></h5>
 							</li>
 							<li>
-								<h5>Print, Publishing<span>Layout, Templating</span></h5>
+								<h5>Print, Publishing <span>Layout, Templating, Packaging</span></h5>
 							</li>
 						</ul>
 					</div>

@@ -17,16 +17,16 @@ include_once( $root."/templates/header.php"); ?>
       <div class="grid-container">
         <ul class="skills">
           <li>
-            <h5>Front-End Development<span>HTML5, Sass, JS, Grunt, Git, Wordpress</span></h5>
+            <h5>Front-End & Back-End Development<span>HTML5, JS, Sass, Grunt, Git, Wordpress</span></h5>
           </li>
           <li>
             <h5>Photography<span>Commercial Portraits, Stock Contributor</span></h5>
           </li>
           <li>
-            <h5>Branding, Graphic Design<span>Photoshop, Illustrator</span></h5>
+            <h5>Branding, Graphic Design<span>Photoshop, Illustrator, Figma</span></h5>
           </li>
           <li>
-            <h5>Print, Publishing<span>Layout, Templating</span></h5>
+            <h5>Print, Publishing<span>Layout, Templating, Packaging</span></h5>
           </li>
         </ul>
       </div>

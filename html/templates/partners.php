@@ -2,7 +2,7 @@
 	<div class="statement">
 		<div class="cell">
 			<h3>Esteemed Partnerships</h3>
-			<p>Design and photography have allowed me to collaborate with some great folks<br class="hide-for-large"> through the years.</p>
+			<p>Design and photography have allowed me to collaborate with some great folks<br class="hide-for-large"> throughout the years.</p>
 		</div>
 	</div>
 
