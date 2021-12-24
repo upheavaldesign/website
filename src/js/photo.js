@@ -64,7 +64,7 @@
       var p = [];
       p.slug = obj.attr('data-slug');
       iPath = '/assets/' + pageSlug + '/' + p.slug + '-thumb.jpg';
-      $('.frame', obj).append('<img class="lazyload" data-src="' + iPath + '" src="/assets/ui/pixel.png" alt="' + p.slug + '">');
+      $('.frame', obj).append('<img class="lazyload" data-src="' + iPath + '" src="/assets/gfx/pixel.png" alt="' + p.slug + '">');
     });
     $(".btn-thumb .frame img").one('error', function () {
       console.log("error loading thumb grid");
