@@ -6,13 +6,6 @@
 	Web: https://www.upheavaldesign.com
 	Instagram: https://www.instagram.com/upheavaldesign
 	Location: Portland, OR, USA
-
-	Adam Keys
-	Graphic Design, Photography
-	Email: adam@upheavaldesign.com
-	Instagram: https://www.instagram.com/upheavaltm
-	Location: Spokane, WA, USA
-	
 	
 
 /* Colophon*/
