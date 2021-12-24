@@ -4,7 +4,7 @@ $page_title =  ucwords(str_replace("-"," ",$parent)).' • '.$site_name;
 $description = "Jeremiah Deasey works with enterprise companies and small businesses to build websites, design branding, and capture portraits.";
  /* default Open Graph image */
  $ogtag = array(
-	"img" => '/assets/ui/OG-UPHEAVAL.jpg',
+	"img" => '/assets/gfx/OG-UPHEAVAL.jpg',
 	"imgW" => '1200', 
 	"imgH" => '630' 
 );
@@ -17,14 +17,14 @@ if($parent == 'web'){
 } elseif($parent == 'photo'){
 	$description = "Jeremiah Deasey photographs excellent commercial portraits with studio lighting.";
 	$ogtag = array(
-		"img" => '/assets/ui/OG-UPHEAVAL_Photo.jpg',
+		"img" => '/assets/gfx/OG-UPHEAVAL_Photo.jpg',
 		"imgW" => '1088', 
 		"imgH" => '710' 
 	);
 }elseif($parent == 'about'){
 	$description = "Jeremiah Deasey is a designer and photographer who loves to create stuff, and problem solve.";
 	$ogtag = array(
-		"img" => '/assets/ui/OG-JeremiahDeasey.jpg',
+		"img" => '/assets/gfx/OG-JeremiahDeasey.jpg',
 		"imgW" => '1200', 
 		"imgH" => '800' 
 	);	 
@@ -32,7 +32,7 @@ if($parent == 'web'){
 	$page_title ='Adam Keys'.' • '.$site_name;
 	$description = "Adam Keys focuses his craft within the boundaries of visual design, specializing in photo touchup and digital effects where he blends illusion with realism.";
 	$ogtag = array(
-		"img" => '/assets/ui/OG-AdamKeys.jpg',
+		"img" => '/assets/gfx/OG-AdamKeys.jpg',
 		"imgW" => '1200', 
 		"imgH" => '800' 
 	);
@@ -50,7 +50,7 @@ if($parent == 'web'){
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="msapplication-TileColor" content="#39f">
-<meta name="msapplication-TileImage" content="/assets/ui/favicon-144.png">
+<meta name="msapplication-TileImage" content="/assets/gfx/favicon-144.png">
 <meta name="format-detection" content="telephone=no">
 <meta property="og:url" content="<?php echo $uri; ?>" />
 <meta property="og:type" content="website" />
@@ -61,14 +61,13 @@ if($parent == 'web'){
 <meta property="og:image:width" content="<?php echo $ogtag['imgW']; ?>" />
 <meta property="og:image:height" content="<?php echo $ogtag['imgH']; ?>" />
 
-<?php $css = ($local) ? '/assets/css/styles.css' : '/assets/css/styles-min.1560900987267.css'; ?>
-<link rel="stylesheet" type="text/css"  href="<?php echo $css; ?>"/>
+<link rel="stylesheet" type="text/css"  href="/assets/css/styles.css?v=1640309261341!"/>
 <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.png" />
-<link rel="apple-touch-icon-precomposed" href="/assets/ui/favicon-152.png">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ui/favicon-144.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ui/favicon-114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ui/favicon-72.png">
-<link rel="apple-touch-icon-precomposed" href="/assets/ui/favicon-57.png">
+<link rel="apple-touch-icon-precomposed" href="/assets/gfx/favicon-152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/gfx/favicon-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/gfx/favicon-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/gfx/favicon-72.png">
+<link rel="apple-touch-icon-precomposed" href="/assets/gfx/favicon-57.png">
 <link itemprop="thumbnailUrl" href="<?php echo $host_url.$ogtag['img']; ?>"> 
 <link rel="canonical" href="<?php echo $uri; ?>">
 <link type="text/plain" rel="author" href="/humans.txt">

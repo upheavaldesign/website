@@ -2,7 +2,7 @@
 	<div class="grid-container">
 		<div class="logo">
 			<a href="/">
-				<figure class="upheaval"><img src="/assets/ui/UPHEAVAL.png" alt="Upheaval Design logo"></figure>
+				<figure class="upheaval"><img src="/assets/gfx/UPHEAVAL.png" alt="Upheaval Design logo"></figure>
 				<div class="name">UPHEAVAL <span class="title">Design &amp; Photo</span></div>
 			</a>
 		</div>

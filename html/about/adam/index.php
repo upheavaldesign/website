@@ -1,6 +1,6 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
 include_once( $root."/templates/header.php");
-$artwork = json_decode(file_get_contents('../../assets/data/artwork-adam.json'), true);
+$artwork = json_decode(file_get_contents('../../data/artwork-adam.json'), true);
 ?>
 
 <section class="page-heading">
@@ -72,7 +72,7 @@ $artwork = json_decode(file_get_contents('../../assets/data/artwork-adam.json'),
           <div class="btn-thumb" data-path="<?php echo $path; ?>" data-slug="<?php echo $img; ?>"
             data-count="<?php echo $i; ?>">
             <figure class="frame">
-              <img class="lazyload" data-src="<?php print $path.$img.'-thumb.jpg'; ?>" src="/assets/ui/pixel.png"
+              <img class="lazyload" data-src="<?php print $path.$img.'-thumb.jpg'; ?>" src="/assets/gfx/pixel.png"
                 alt="<?php echo $img; ?>" />
             </figure>
           </div>

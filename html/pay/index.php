@@ -19,8 +19,8 @@ include_once( $root."/templates/header.php"); ?>
           <input type="hidden" name="currency_code" value="USD">
           <input type="hidden" name="bn" value="PP-BuyNowBF">
           <input type="hidden" name="item_name" value="Online Payment">
-          <input type="hidden" name="cancel_return" value="http://www.upheavaldesign.com">
-          <input type="hidden" name="return" value="http://www.upheavaldesign.com">
+          <input type="hidden" name="cancel_return" value="https://www.upheavaldesign.com">
+          <input type="hidden" name="return" value="https://www.upheavaldesign.com">
           <input class="text-center" type="text" name="amount" id="amount" placeholder="enter payment amount">
           <input type="submit" class="btn" value="Pay with PayPal">
         </form>

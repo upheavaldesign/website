@@ -1,6 +1,6 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
 include_once( $root."/templates/header.php");
-$photos = json_decode(file_get_contents('../assets/data/photos.json'), true);
+$photos = json_decode(file_get_contents('../data/photos.json'), true);
 ?>
 
 <section class="page-heading">
@@ -25,7 +25,7 @@ $photos = json_decode(file_get_contents('../assets/data/photos.json'), true);
 					data-count="<?php echo $i; ?>">
 					<figure class="frame">
 						<img class="lazyload" data-src="<?php print $path.$key.'-thumb.jpg'; ?>"
-							src="/assets/ui/pixel.png" alt="<?php echo $img['alt']; ?>" />
+							src="/assets/gfx/pixel.png" alt="<?php echo $img['alt']; ?>" />
 					</figure>
 				</div>
 			</div>

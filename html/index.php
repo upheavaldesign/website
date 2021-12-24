@@ -29,7 +29,7 @@ $artwork = json_decode(file_get_contents('assets/data/artwork.json'), true);
 							<figcaption><span class="client-title"><?php echo $client['title']; ?></span>
 								<span class="client-year"><?php echo $client['year']; ?></span></figcaption>
 							<div class="img-wrap fill"><img class="lazyload"
-									data-src="<?php echo $path.$client['thumb']; ?>.jpg" src="/assets/ui/pixel.png"
+									data-src="<?php echo $path.$client['thumb']; ?>.jpg" src="/assets/gfx/pixel.png"
 									alt="<?php echo $client['thumb-alt']; ?>"></div>
 						</figure>
 						<div class="summary">
@@ -66,7 +66,7 @@ $artwork = json_decode(file_get_contents('assets/data/artwork.json'), true);
 						data-count="<?php echo $i; ?>">
 						<figure class="frame">
 							<img class="lazyload" data-src="<?php print $path.$key.'-thumb.jpg'; ?>"
-								src="/assets/ui/pixel.png" alt="<?php echo $img['alt']; ?>" />
+								src="/assets/gfx/pixel.png" alt="<?php echo $img['alt']; ?>" />
 						</figure>
 					</div>
 				</div>

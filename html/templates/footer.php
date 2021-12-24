@@ -32,8 +32,8 @@
 	</section>
 </footer>
 
+<script type="text/javascript" src="/assets/js/scripts.js?v=1640309261342!"></script>
 <?php if($local){?>
-<script type="text/javascript" src="/assets/js/scripts.js"></script>
 <script type="text/javascript">
   document.write('<script src="http://' +
     (location.host || 'localhost').split(':')[0] +
@@ -41,7 +41,6 @@
     'script>')
 </script>
 <?php } else { ?>
-<script type="text/javascript" src="/assets/js/scripts-min.1594763918239.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
