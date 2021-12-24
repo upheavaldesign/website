@@ -62,7 +62,6 @@
         float: left;
 
         img {
-            @include opacity(0.75);
             @include transition(opacity 180ms ease-in-out);
         }
 
@@ -70,11 +69,6 @@
             display: block;
             margin: 10px auto;
             padding: 10px 0;
-
-            &:hover img {
-                @include opacity(1);
-            }
-
         }
     }
 }
@@ -109,10 +103,6 @@
             a {
                 padding: 10px 35px;
             }
-
-            img {
-                @include opacity(0.5);
-            }
         }
     }
 }
@@ -122,10 +112,9 @@
     .partners {
         margin-top: 36px;
 
-        figure img {
-            @include opacity(0.4);
+        a:hover img {
+            @include opacity(0.5);
         }
-
     }
 }
 
