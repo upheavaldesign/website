@@ -1,0 +1,123 @@
+{  
+  "statedclearly": {
+    "homepage": "true",
+    "name": "Stated Clearly",
+    "title": "Explaining Complex Science<br class=\"\"> with Animations.",
+    "scope": "Design, Wordpress",
+    "url": "https://www.statedclearly.com",
+    "year": "Best Friends Since 1998",
+    "thumb": "einstein",
+    "thumb-alt":"Illustration of Darwin riding bird."
+  },
+  "oregonruns": {
+    "homepage": "true",
+    "name": "OregonRuns",
+    "title": "Run. Everyday.",
+    "scope": "Design, Wordpress, Maps, Photography",
+    "url": "https://www.oregonruns.com",
+    "year": "Personal Project Launched 2013",
+    "thumb": "forest_trail",
+    "thumb-alt":"Running trail in Oregon forest."
+  }, 
+  "quandarypeak": {
+    "homepage": "true",
+    "name": "Quandary Peak Research",
+    "title": "Expert Analysis of Software<br class=\"\"> and Computing Technology.",
+    "scope": "Design, Web",
+    "web-scope": "",
+    "url": "https://www.quandarypeak.com",
+    "year": "Client Since 2016",
+    "thumb": "losangeles",
+    "thumb-alt":"Busy street in Los Angeles."
+  }, 
+  "goldentongue": {
+    "homepage": "true",
+    "name": "Golden Tongue",
+    "title": "Custom SEO Strategies",
+    "scope": "Web, Photography",
+    "url": "https://www.goldentongue.com/",
+    "year": "Launched 2020",
+    "thumb":"teamwork",
+    "thumb-alt":"Team works together from home"
+  }, 
+  "larkacademy": {
+    "homepage": "true",
+    "name": "Lark Academy",
+    "title": "This is High School Redesigned.",
+    "scope": "Design, Web",
+    "url": "https://www.larkacademy.org/",
+    "year": "Launched 2019",
+    "thumb": "lark_academy",
+    "thumb-alt":"Two young women learning together."
+  },  
+  "millerwagner": {
+    "homepage": "true",
+    "name": "Miller & Wagner, LLP",
+    "title": "Medical Malpractice Attorneys",
+    "scope": "Web, Branding, Photography",
+    "url": "https://www.miller-wagner.com",
+    "year": "Client Since 2016",
+    "thumb":"mother_baby",
+    "thumb-alt":"Surgeon's gloves"
+  },   
+  "liquorinsurance": {
+    "homepage": "false",
+    "name": "Liquor Insurance",
+    "title": "Liquor Insurance<br class=\"\"> for Restaurants, Bars,<br class=\"\"> and Night Clubs.",
+    "scope": "Branding, Web",
+    "url": "https://www.liquorinsurance.com",
+    "year": "Client Since 2015",
+    "thumb": "bartender",
+    "thumb-alt":"Bartender pouring cocktail."
+  },
+  "flexlegal": {
+    "homepage": "false",
+    "name": "Flex Legal",
+    "title": "Litigation Support",
+    "scope": "Branding, Web, Photography",
+    "url": "https://www.flexlegal.com",
+    "year": "Client Since 2009",
+    "thumb":"deposition",
+    "thumb-alt":"Videographer at deposition"
+  },
+  "amalfis": {
+    "homepage": "false",
+    "name": "Amalfi's Restaurant",
+    "title": "Classic Italian, since 1959.",
+    "scope": "Web, Photography",
+    "url": "https://www.amalfisrestaurant.com",
+    "year": "Client Since 2006",
+    "thumb": "happyhour",
+    "thumb-alt":"Happy Hour at Amalfi's Restaurant"
+  },     
+  "mcmullen": {
+    "homepage": "false",
+    "name": "Jon J. McMullen",
+    "title": "Criminal Defense Attorney.<br class=\"\">Trial Lawyer of the Year.",
+    "scope": "Web, Photography",
+    "url": "https://www.jonmcmullenlaw.com/",
+    "year": "Client Since 2013",
+    "thumb":"jurybox",
+    "thumb-alt":"Jury box in a federal courtroom"
+  },
+  "sandin": {
+    "homepage": "false",
+    "name": "Sandin Insurance",
+    "title": "Family-Owned Insurance Firm",
+    "scope": "Web, Branding, Photography",
+    "url": "https://www.sandininsurance.com",
+    "year": "Client Since 2011",
+    "thumb": "mechanic",
+    "thumb-alt":"Auto Mechanic"
+  },
+  "caroamico": {
+    "homepage": "false",
+    "name": "Caro Amico",
+    "title": "Historic Italian Cafe<br class=\"\"> in Portland Oregon",
+    "scope": "Web, Photography",
+    "url": "https://www.caroamicoitaliancafe.com/",
+    "year": "Client Since 2011",
+    "thumb":"old-fashioned",
+    "thumb-alt":"Old Fashioned drink"
+  }
+}

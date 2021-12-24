@@ -1,0 +1,101 @@
+{
+  "homepage": {
+    "hide": "true",
+    "path": "logos",
+    "imgs": {
+      "milwaukielaundry_w": {
+        "alt": "Milwaukie Laundry"
+      },
+      "titan_w": {
+        "alt": "Titan Construction Group"
+      },
+      "zaro_w": {
+        "alt": "Zaro Court Reporting"
+      },
+      "ripcity_w": {
+        "alt": "Rip City Roofing"
+      },
+      "rivercity": {
+        "alt": "River City Media"
+      }
+    }
+  },
+  "featured": {
+    "path": "logos",
+    "imgs": {
+      "titan_w": {
+        "alt": "Titan Construction Group"
+      },
+      "ripcity_w": {
+        "alt": "Rip City Roofing"
+      },
+      "gemtech_w": {
+        "alt": "Gemtech Game &amp; Coin"
+      },
+      "zaro_w": {
+        "alt": "Zaro Court Reporting"
+      },
+      "monsterslapz": {
+        "alt": "Monster Slapz"
+      }
+    }
+  },
+  "logos": {
+    "path": "logos",
+    "imgs": {
+      "oregonruns_w": {
+        "alt": "Oregon Runs"
+      },
+      "rivercity": {
+        "alt": "River City Media"
+      },
+      "flexlegal_w": {
+        "alt": "Flex Legal"
+      },
+      "millerwagner": {
+        "alt": "Miller &amp; Wagner"
+      }
+    }
+  },
+  "smaller": {
+    "path": "logos",
+    "imgs": {
+      "metricc_w": {
+        "alt": "Metricc Salon"
+      },
+      "completescreen": {
+        "alt": "Complete Screening Agency"
+      },
+      "milwaukielaundry_w": {
+        "alt": "Milwaukie Laundry"
+      },
+      "newfashionedfood_w": {
+        "alt": "New Fashioned Food"
+      },
+      "wallace_w": {
+        "alt": "Wallace Bar"
+      }
+    }
+  },
+  "print": {
+    "hide": "true",
+    "path": "print",
+    "imgs": [
+      "hartwagner",
+      "quandarypeak",
+      "liquorinsurance",
+      "flexlegal"
+    ]
+  },
+  "music": {
+    "hide": "true",
+    "path": "music",
+    "imgs": [
+      "BBSDiaries",
+      "absolutely",
+      "bloodyradio",
+      "scarecrow",
+      "michaelkay"
+    ]
+  }
+}

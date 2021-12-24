@@ -1,0 +1,131 @@
+{  
+  "portraits2": {
+    "imgs": {
+      "kristi_gifford": {
+        "alt": "Portrait: Kristi Gifford"
+      },
+      
+      "baas_tina": {
+        "alt": "Portrait: Tina Ambrose"
+      },
+      "baas_andrew": {
+        "alt": "Portrait: Andrew Altschul"
+      },
+      "baas_heather": {
+        "alt": "Portrait: Heather Magga"
+      },
+      "ashe_urban": {
+        "alt": "Portrait: Ashe Urban"
+      }
+    }
+  },
+  "portraits1": {
+    "imgs": {
+      "callahan": {
+        "alt": "Portrait: Joshua Callahan, Attorney at Law"
+      },      
+      "leepoe": {
+        "alt": "Portrait: Lee Poe, ND"
+      },
+      "stephen_vandervort": {
+        "alt": "Portrait: Stephen Vandervort"
+      },
+      "baas_paul": {
+        "alt": "Portrait: Paul Buchanan"
+      }
+    }
+  },
+  "portraits3": {
+    "imgs": {
+            "kilotone": {
+        "alt": "Portrait: Kilo Tone, Rapper"
+      },
+      "bishop_creme": {
+        "alt": "Portrait: Bishop, Rapper"
+      },
+      "bishop_door": {
+        "alt": "Portrait: Bishop, Rapper"
+      },
+      "iame_studio": {
+        "alt": "Portrait: IAME, Hip Hop Musician"
+      },
+      "danza_storm": {
+        "alt": "Portrait: Anthony Danza, Producer"
+      }      
+    }
+  },
+  "portraits10": {
+    "imgs": {
+      "nonstop": {
+        "alt": "Portrait: Nonstop Da Hitman, Producer"
+      },         
+      "iame_rain": {
+        "alt": "Portrait: IAME, Hip Hop Musician"
+      },
+      "blucrush": {
+        "alt": "Portrait: Blu Crush, Rapper"
+      }, 
+      "dopethought": {
+        "alt": "Portrait: DopeThough, Rapper"
+      },      
+      "dodi_phi": {
+        "alt": "Portrait: Dodi Phi, Minneapolis"
+      }
+    }
+  },  
+  "portraits4": {
+    "imgs": {
+      "dodiphi2": {
+        "alt": "Portrait: Dodi Phi, Minneapolis"
+      },
+      "john_wilson": {
+        "alt": "Portrait: John Wilson, Scapegoat Tattoo"
+      },
+      "brian_wilson": {
+        "alt": "Portrait: Brian Wilson, Scapegoat Tattoo"
+      },
+      "danza_blouse": {
+        "alt": "Portrait: Anthony Danza, Producer"
+      }      
+    }
+  },
+  "portraits5": {
+    "imgs": {
+      "isabella": {
+        "alt": "Portrait: Isabella"
+      },  
+      "miranda": {
+        "alt": "Miranda and Puppy"
+      },    
+      "gold": {
+        "alt": "Portrait: Gold Trenchcoat"
+      },
+      "amber_grieves": {
+        "alt": "Portrait: Widow's Grief"
+      },
+      "seagrass": {
+        "alt": "Portrait: Seaside"
+      }      
+    }
+  },
+  "portraits6": {
+    "imgs": {
+      "brunette": {
+        "alt": "Portrait: Glamour Styling"
+      },
+      "pushup": {
+        "alt": "Portrait: Woman Fitness Trainer and Dumbells"
+      },
+      "amber_trail": {
+        "alt": "Portrait: Woman Hiking"
+      },
+      "smiles": {
+        "alt": "Portrait: Woman in Summer Color"
+      },
+      "isabella_reading": {
+        "alt": "Portrait: Isabella Reading in Garden"
+      }
+      
+    }
+  }
+}

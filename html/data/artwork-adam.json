@@ -1,0 +1,34 @@
+{
+  "group1": {
+    "imgs": [
+      "hooligan",
+      "rittz-white_jesus_loosies",
+      "demunjones"
+    ]
+  },
+  "group2": {
+    "imgs": [
+      "adamcalhoun-billygoat",
+      "burncounty",
+      "cwb",
+      "johnnyrotten"
+    ]
+  },
+  "group3": {
+    "imgs": [
+      "wildcard-tour",      
+      "gamestaz",
+      "koshir",
+      "knothead", 
+      "overtime-united_we_stand"   
+    ]
+  },
+  "group4": {
+    "imgs": [
+      "overtime-bluecollar",
+      "wildcard-drug_dealers_kid",
+      "wildcard-shooting_gallery",
+      "overtime"
+    ]
+  }
+}
