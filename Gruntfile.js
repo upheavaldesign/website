@@ -1,34 +1,19 @@
 module.exports = function (grunt) {
-    var mozjpeg = require('imagemin-mozjpeg');
-    // Watcher for sass compilation and js hinting (with livereload enabled)
+    /* detects and loads which modules are required */
+    require('load-grunt-tasks')(grunt);
+
+    const sass = require('node-sass');
+    const mozjpeg = require('imagemin-mozjpeg');
 
     //get current file path
     var path = require('path');
     path = path.resolve();
 
+    const assets = 'html/assets/';
+
     grunt.initConfig({
 
         pkg: grunt.file.readJSON('package.json'),
-
-        sass: {
-            prod: {
-                options: {
-                    style: 'compressed',
-                    sourcemap: 'none'
-                },
-                files: {
-                    'html/assets/css/styles-min.css': 'src/css/main.scss'
-                }
-            },
-            dev: {
-                options: {
-                    style: 'expanded'
-                },
-                files: {
-                    'html/assets/css/styles.css': 'src/css/main.scss'
-                }
-            }
-        },
         watch: {
             scss: {
                 options: {
@@ -36,23 +21,7 @@ module.exports = function (grunt) {
                     interrupt: true
                 },
                 files: ['src/css/**/*.scss'],
-                tasks: ['sass:dev']
-            },
-
-            css: {
-                options: {
-                    livereload: true,
-                    debounceDelay: 50
-                },
-                files: ['html/assets/css/styles.css']
-            },
-            html: {
-                options: {
-                    livereload: true,
-                    debounceDelay: 50,
-                    interrupt: true
-                },
-                files: ['html/**/*.php', 'html/*.php']
+                tasks: ['sass']
             },
             js: {
                 options: {
@@ -60,10 +29,45 @@ module.exports = function (grunt) {
                     debounceDelay: 50,
                     interrupt: true
                 },
-                files: ['src/js/*.js', '!src/js/concat.js'],
-                tasks: ['uglify:dev']
+                files: ['src/js/*.js'],
+                tasks: ['terser:dev']
+            },
+            livereload: {
+                // Here we watch the files the sass task will compile to
+                // These files are sent to the live reload server after sass compiles to them
+                options: {
+                    livereload: true
+                },
+                files: [assets + 'js/scripts.js', assets + 'css/styles.css']
+            },
+        },
+
+        sass: {
+            options: {
+                implementation: sass,
+                //sourceMap: true
+            },
+            prod: {
+                files: {
+                    [assets + 'css/styles.css']: 'src/css/main.scss'
+                }
             }
         },
+
+        cssmin: {
+            options: {
+                mergeIntoShorthands: false,
+                roundingPrecision: -1,
+                sourceMap: true,
+                report: 'min'
+            },
+            target: {
+                files: {
+                    [assets + 'css/styles.css']: [assets + 'css/styles.css']
+                }
+            }
+        },
+
         imagemin: {
             dynamic: {
                 options: {
@@ -84,67 +88,62 @@ module.exports = function (grunt) {
                 }]
             }
         },
+
         concat: {
             /* assemble libraries */
             libs: {
                 files: [{
-                    'src/js/libs/libs.js': ['node_modules/jquery/dist/jquery.min.js', 'js/libs/picturefill.min.js', 'src/js/libs/lazysizes.min.js', 'src/js/libs/svg4everybody.min.js', 'src/js/libs/masonry.pkgd.min.js']
+                    [assets + 'js/libs.js']: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/lazysizes/lazysizes.min.js', 'node_modules/masonry-layout/dist/masonry.pkgd.js']
                 }]
-            },
-            // custom: {
-            //     options: {
-            //         banner: '(function ($) {',
-            //         footer: '})(jQuery);'
-            //     },
-            //     files: {
-            //         'src/js/concat.js': ['src/js/basics.js', 'src/js/photo.js', 'src/js/web.js']
-            //     }
-            // },
+            }
         },
-        uglify: {
+
+        terser: {
             /* assemble custom scripts */
             dev: {
                 options: {
                     sourceMap: true,
                     compress: false,
-                    //beautify: true,
                     mangle: false,
-                    preserveComments: 'all',
-                    banner: '/*! <%= pkg.site_title %>\n<%= pkg.site_url %>\n' +
-                        'Published: <%= grunt.template.today("dddd, mmmm dS, yyyy") %>\n\n' +
-                        'Author: <%= pkg.author %>\n' +
-                        'Version: Development */'
+                    output: {
+                        beautify: true,
+                    },
+                    //preserveComments: 'all',
+                    //banner: '/*! Version: Development */'
                 },
                 files: [{
-                    'html/assets/js/scripts.js': ['src/js/libs/libs.js', 'src/js/basics.js']
+                    [assets + 'js/scripts.js']: [
+                        assets + 'js/libs.js',
+                        'src/js/basics.js'
+                    ]
                 }]
             },
             /* assemble production scripts and minify */
-            prod: {
+            dist: {
                 options: {
                     mangle: {
                         reserved: ['jQuery']
                     },
-                    preserveComments: false,
-                    banner: '/*! <%= pkg.site_title %>\n<%= pkg.site_url %>\n' +
-                        'Published: <%= grunt.template.today("dddd, mmmm dS, yyyy") %>\n\n' +
-                        'Author: <%= pkg.author %> */'
+                    output: {
+                        comments: /^!/
+                    },
                 },
                 files: [{
-                    'html/assets/js/scripts-min.js': 'html/assets/js/scripts.js'
+                    [assets + 'js/scripts.js']: [assets + 'js/scripts.js']
                 }]
             }
         },
+
         cachebreaker: {
             options: {
-                match: ['scripts-min.*.js', 'styles-min.*.css'],
+                match: ["v=*!"],
                 position: 'overwrite'
             },
             files: {
-                src: ['html/templates/header.php', 'html/templates/footer.php']
+                src: ['html/templates/meta.php', 'html/templates/footer.php']
             }
-
         },
+
         'string-replace': {
             styles: {
                 options: {
@@ -154,21 +153,31 @@ module.exports = function (grunt) {
                     }]
                 },
                 files: {
-                    'html/assets/css/styles.css': 'html/assets/css/styles.css'
+                    [assets + 'css/styles.css']: [assets + 'css/styles.css']
+                }
+            },
+            scripts: {
+                options: {
+                    replacements: [{
+                        pattern: /{{ CREDITS }}/g,
+                        replacement: '\n<%= pkg.site_title %>\n<%= pkg.site_url %>\n' +
+                            'Developer: <%= pkg.author %>\n' +
+                            'Published: <%= grunt.template.today("dddd, mmmm dS, yyyy") %>\n'
+                    }]
+                },
+                files: {
+                    [assets + 'js/scripts.js']: [assets + 'js/scripts.js']
                 }
             }
+        },
+
+        clean: {
+            //clean up build directory before processing src
+            SVG: assets + 'gfx/',
+            //IMG: assets + 'img/'
         }
 
     });
-
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-newer');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-cache-breaker');
-    grunt.loadNpmTasks('grunt-string-replace');
 
     // on watch events, configure jshint:all to process only changed files
     grunt.event.on('watch', function (action, filepath) {
@@ -177,33 +186,50 @@ module.exports = function (grunt) {
 
     // Default task(s).
     grunt.registerTask('default', "Run for local development.", function () {
+        grunt.task.run('local');
         grunt.task.run('watch');
     });
 
-    grunt.registerTask('build', "Build production output.", function () {
-        //grunt.task.run('newer:imagemin:dynamic');
 
-        /* process dev versions */
-        grunt.task.run('sass:dev');
-        grunt.task.run('concat:libs');
-        //grunt.task.run('concat:custom');
-        grunt.task.run('uglify:dev');
+    /* this task fires when first starting grunt */
+    grunt.registerTask('local', "Build local resources.", function () {
+        grunt.task.run('clean');
+        grunt.task.run('imagemin');
+
+        /* compile scripts */
+        grunt.task.run('concat');
+        grunt.task.run('terser:dev');
+
+        grunt.task.run('sass');
+
         /* add current date to styles & scripts */
-        grunt.task.run('string-replace:styles');
+        grunt.task.run('string-replace');
+    });
+
+    grunt.registerTask('build', "Build production output.", function () {
+        grunt.task.run('clean');
+        grunt.task.run('imagemin:dynamic');
 
         /* process production versions */
-        grunt.task.run('sass:prod');
-        grunt.task.run('uglify:prod');
+        grunt.task.run('concat');
+        grunt.task.run('terser');
+
+        grunt.task.run('sass');
+        grunt.task.run('cssmin');
+
+        /* add current date to styles & scripts */
+        grunt.task.run('string-replace');
 
         /* add version serial to resource tags */
         grunt.task.run('cachebreaker');
+    });   
+
+    grunt.registerTask('images', "Process Images and SVGs", function () {
+        grunt.task.run('clean');
+        grunt.task.run('imagemin:dynamic');
     });
 
     grunt.registerTask('version', "Set Version", function () {
         grunt.task.run('cachebreaker');
-    });
-
-    grunt.registerTask('images', "Process Images and SVGs", function () {
-        grunt.task.run('newer:imagemin:dynamic');
     });
 };
