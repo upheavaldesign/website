@@ -1,7 +1,7 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'];
 include_once( $root."/templates/header.php");
-$web = json_decode(file_get_contents('assets/data/web.json'), true);
-$artwork = json_decode(file_get_contents('assets/data/artwork.json'), true);
+$web = json_decode(file_get_contents('data/web.json'), true);
+$artwork = json_decode(file_get_contents('data/artwork.json'), true);
 ?>
 
 <section class="page-heading">

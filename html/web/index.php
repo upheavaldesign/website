@@ -39,7 +39,7 @@ $web = json_decode(file_get_contents('../data/web.json'), true);
 		</div>
 	</section>
 
-	<hr class="my-2">
+	<hr class="mt-5">
 
 	<?php include $root."/web/tpl-agency.php"; ?>
 </article>
