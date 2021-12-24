@@ -1,0 +1,22 @@
+// The main colors
+$color-primary: hsla(210, 100%, 60%, 1); //#39f
+$color-secondary: hsla(210, 100%, 45%, 1); 
+
+$color-link: hsla(210, 100%, 60%, 1);
+$color-hover: hsla(210, 100%, 45%, 1);
+$color-dark: #222222;
+$color-dark-grey: #444;
+$color-grey: #888;
+$color-egg: #f1f1f1;
+$color-border: #ededed; 
+
+//text colors
+$color-text-dark: darken(#888, 25%);
+$color-text-normal: #888;
+$color-text-light: lighten(#888, 25%);
+
+$color-button: hsla(210, 100%, 60%, 1);
+$color-button-hover: hsla(210, 100%, 45%, 1);
+
+$fade-white:rgba(255, 255, 255, 0.6);
+$fade-blk:rgba(0, 0, 0, 0.6);
