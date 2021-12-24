@@ -13,7 +13,7 @@
 					rel="noopener">
 					<figure class="">
 						<div class="img-wrap"><img class="lazyload" data-src="<?php echo $path.'anchornw'; ?>.jpg"
-								src="/assets/ui/pixel.png" alt="Anchor NW Property Group" /></div>
+								src="/assets/gfx/pixel.png" alt="Anchor NW Property Group" /></div>
 					</figure>
 					<div class="summary">
 						<h5 class="client-name">Anchor NW<span class="client-scope">Front-end</span></h5>
@@ -21,13 +21,13 @@
 				</a>
 			</div>
 			<div class="cell large-6">
-				<a class="client agency" href="http://contendco.com/" target="_blank" rel="noopener">
+				<a class="client agency" href="https://ecosizer.ecotope.com/sizer/" target="_blank" rel="noopener">
 					<figure class="">
-						<div class="img-wrap"><img class="lazyload" data-src="<?php echo $path.'contend'; ?>.jpg"
-								src="/assets/ui/pixel.png" alt="Contend" /></div>
+						<div class="img-wrap"><img class="lazyload" data-src="<?php echo $path.'ecosizer'; ?>.jpg"
+								src="/assets/gfx/pixel.png" alt="Ecosizer" /></div>
 					</figure>
 					<div class="summary">
-						<h5 class="client-name">Contend<span class="client-scope">Front-end</span></h5>
+						<h5 class="client-name">Ecosizer<span class="client-scope">Front-end</span></h5>
 					</div>
 				</a>
 			</div>
@@ -35,10 +35,10 @@
 				<a class="client agency" href="https://www.think-portland.com/" target="_blank" rel="noopener">
 					<figure class="">
 						<div class="img-wrap"><img class="lazyload" data-src="<?php echo $path.'think-portland'; ?>.jpg"
-								src="/assets/ui/pixel.png" alt="Think Real Estate" /></div>
+								src="/assets/gfx/pixel.png" alt="Think Real Estate" /></div>
 					</figure>
 					<div class="summary">
-						<h5 class="client-name">Think Real Estate<span class="client-scope">Front-end, Video</span></h5>
+						<h5 class="client-name">Think Real Estate<span class="client-scope">Front-end, Wordpress, Maps, Video</span></h5>
 					</div>
 				</a>
 			</div>
