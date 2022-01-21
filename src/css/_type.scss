@@ -272,3 +272,51 @@ blockquote {
         padding-bottom: 40px;
     }
 }
+
+
+/* Fix FOUT caused by font-kit loading delay */
+.wf-loading {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    nav a,
+    ul li,
+    figcaption,
+    .caption,
+    .logo {
+        visibility: hidden;
+    }
+
+    nav * {
+        /*this removes the css transition that appears on new page load*/
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+    }
+}
+
+.wf-active,
+.wf-inactive {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    nav a,
+    ul li,
+    figcaption,
+    .caption,
+    .logo {
+        visibility: visible;
+    }
+}

@@ -1,4 +1,6 @@
-// https://github.com/MarcoPal/Foundation-spacing-utility
+/* Helper Utility: Spacing
+** https://github.com/MarcoPal/Foundation-spacing-utility
+================================================== */
 
 $space-sizes: (0,
   8px,
@@ -6,8 +8,6 @@ $space-sizes: (0,
   24px,
   32px,
   48px);
-
-// Margin
 
 .m-auto {
   margin: auto;
