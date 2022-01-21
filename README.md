@@ -31,7 +31,7 @@ We are using Sass and [Zurb Foundation 6](https://foundation.zurb.com/sites/docs
 
 ### JS
 
-We are using jQuery. All scripts are compiled and minified.
+We are using jQuery, helper plugins, + custom code. All scripts are compiled and minified.
 
 
 ### Images
@@ -41,5 +41,5 @@ Images are stored in **src/img**. Graphics and SVGs are stored in **src/gfx**, S
 
 
 #### Helper Scripts
-[LazySizes](https://github.com/aFarkas/lazysizes) 
+[LazySizes](https://github.com/aFarkas/lazysizes)  
 [Masonry](https://masonry.desandro.com/)
