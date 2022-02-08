@@ -128,32 +128,6 @@ button {
     }
 }
 
-.icon-email:before {
-    content: '\e801';
-    margin-right: 15px;
-}
-
-.icon-twitter:before {
-    content: '\e802';
-}
-
-.icon-instagram:before {
-    content: '\e803';
-}
-
-.icon-vimeo:before {
-    content: '\e804';
-}
-
-.icon-istock:before {
-    content: '\e805';
-}
-
-.icon-500px:before {
-    content: '\e806';
-    font-size: 2.25em;
-}
-
 .icon-right:before {
     content: '\e807';
 }
@@ -166,29 +140,59 @@ button {
     content: '\e809';
 }
 
-.social {
-    margin: 10px auto 20px auto;
+.social-icons {
+	display: flex;
+	flex-flow: row;
+    justify-content: center;
+	align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+	width: 100%;
 
-    li {
-        display: inline-block;
-        margin: 0 4px;
+	a {
+		position: relative;
+		display: inline-block;
+		cursor: pointer; // for links with onclick JS
+		pointer-events: all;
 
-        a {
-            padding: 11px;
-            font-size: 20px;
-            color: $color-grey;
+		// &.facebook svg {
+		// 	fill: #3b5998;
+		// }
 
-            &:hover {
-                color: $color-hover;
-            }
-        }
-    }
+		// &.twitter svg {
+		// 	fill: #1da0f2;
+		// }
 
-    @include breakpoint(large up) {
-        li a {
-            padding: 20px;
-        }
-    }
+		// &.instagram svg {
+		// 	fill: #e60075
+		// }
+
+		// &.linkedin svg {
+		// 	fill: #0e76a8
+		// }
+
+		@media (hover) {
+			&:hover svg {
+				fill: $color-hover;
+			}
+		}
+
+		span {
+			display: block;
+			padding: 10px;
+			width: 44px;
+			height: 44px;
+			background-color: transparent;
+		}
+
+		svg {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			fill: $color-ash;
+			@include transition();
+		}
+	}
 }
 
 @include breakpoint(large up) {
