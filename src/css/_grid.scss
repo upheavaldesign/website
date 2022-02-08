@@ -1,0 +1,21 @@
+/* Extra Grid Styles
+================================================================ */
+@include breakpoint(large only) {
+	.grid-x .large-five {
+		@include xy-cell(1/5, $gutters: 0); // (18/5)
+	}
+
+	.grid-x .large-four {
+		@include xy-cell(25%, $gutters: 0); // (18/4)
+	}
+}
+
+@include breakpoint(xlarge up) {
+	.grid-x .xlarge-five {
+		@include xy-cell(1/5, $gutters: 0); // (18/5)
+	}
+
+	.grid-x .xlarge-four {
+		@include xy-cell(25%, $gutters: 0); // (18/4)
+	}
+}

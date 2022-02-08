@@ -1,0 +1,194 @@
+/* 
+** Use classes to modify base styles
+** ================================
+*/
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.global-width{ 
+	max-width: $global-width;
+}
+
+.text-left { 
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-shadow {
+	@include text-shadow(1px 1px 0px rgba(#000, 0.15));
+}
+
+.c-primary {
+	color: $color-primary;
+}
+
+.c-coal {
+	color: $color-coal;
+}
+
+.c-ash {
+	color: $color-ash;
+}
+
+.bg-primary {
+	background-color: $color-primary;
+}
+.bg-dark {
+	background-color: $color-dark;
+}
+
+.border {
+	border: 1px solid $color-border;
+}
+
+svg {
+	&.fill-ash {
+		fill: $color-ash;
+	}
+	&.fill-primary {
+		fill: $color-primary;
+	}
+}
+
+.justify-left {
+	justify-content: flex-start;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-right {
+	justify-content: flex-end;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-evenly {
+	justify-content: space-evenly;
+}
+
+@include breakpoint(large up) {
+
+	.large-text-left {
+		text-align: left;
+	}
+
+	.large-text-center {
+		text-align: center;
+	}
+
+	.large-text-right {
+		text-align: right;
+	}
+
+	.large-justify-left {
+		justify-content: flex-start;
+	}
+
+	.large-justify-center {
+		justify-content: center;
+	}
+
+	.large-justify-right {
+		justify-content: flex-end;
+	}
+
+	.large-justify-between {
+		justify-content: space-between;
+	}
+
+	.large-justify-evenly {
+		justify-content: space-evenly;
+	}	
+}
+
+@include breakpoint(xlarge up) {
+
+	.xlarge-text-left {
+		text-align: left;
+	}
+
+	.xlarge-text-center {
+		text-align: center;
+	}
+
+	.xlarge-text-right {
+		text-align: right;
+	}
+
+	.xlarge-justify-left {
+		justify-content: flex-start;
+	}
+
+	.xlarge-justify-center {
+		justify-content: center;
+	}
+
+	.xlarge-justify-right {
+		justify-content: flex-end;
+	}
+
+	.xlarge-justify-between {
+		justify-content: space-between;
+	}
+
+	.xlarge-justify-evenly {
+		justify-content: space-evenly;
+	}	
+}
+
+@include breakpoint(xxlarge up) {
+
+	.bg-gradient-cream{
+		/* remove bottom border when bg does not fill screen */
+		border-bottom: none;
+	}
+
+	.xxlarge-text-left {
+		text-align: left;
+	}
+
+	.xxlarge-text-center {
+		text-align: center;
+	}
+
+	.xxlarge-text-right {
+		text-align: right;
+	}
+
+	.xxlarge-justify-left {
+		justify-content: flex-start;
+	}
+
+	.xxlarge-justify-center {
+		justify-content: center;
+	}
+
+	.xxlarge-justify-right {
+		justify-content: flex-end;
+	}
+
+	.xxlarge-justify-between {
+		justify-content: space-between;
+	}
+
+	.xxlarge-justify-evenly {
+		justify-content: space-evenly;
+	}		
+}
