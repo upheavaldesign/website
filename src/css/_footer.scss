@@ -4,7 +4,7 @@
       padding-top: 20px;
       padding-bottom: 20px;
       width: 100%;
-      color: $color-grey;
+      color: $color-ash;
       font-weight: $normal;
       text-align: center;
       border-top: 1px solid $color-border;
@@ -39,7 +39,7 @@
                   margin: 0;
 
                   &.current {
-                      color: $color-grey;
+                      color: $color-ash;
                       pointer-events: none;
 
                       &:hover {
