@@ -1,0 +1,170 @@
+/* 
+** Helpers
+** ================================
+*/
+@mixin linear-gradient($direction, $start, $end) {
+	background: $start;
+	/* Old browsers */
+	background: -moz-linear-gradient($direction, $start 0%, $end 100%);
+	/* FF3.6+ */
+	background: -webkit-linear-gradient($direction, $start 0%, $end 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient($direction, $start 0%, $end 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient($direction, $start 0%, $end 100%);
+	/* IE10+ */
+	background: linear-gradient($direction, $start 0%, $end 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$start, endColorstr=$end, GradientType=0);
+	/* IE6-9 */
+}
+
+@mixin button-gradient($top,
+	$bottom) {
+	background: $color-link;
+	background: -moz-linear-gradient($top, $bottom);
+	background: -ms-linear-gradient($top, $bottom);
+	background: -o-linear-gradient($top, $bottom);
+	background: -webkit-linear-gradient($top, $bottom);
+	background: linear-gradient($top, $bottom);
+}
+
+@mixin gradient($top, $bottom) {
+	background: $color-primary;
+	background: -moz-linear-gradient($top, $bottom);
+	background: -ms-linear-gradient($top, $bottom);
+	background: -o-linear-gradient($top, $bottom);
+	background: -webkit-linear-gradient($top, $bottom);
+	background: linear-gradient($top, $bottom);
+}
+
+@mixin vendor($property,
+	$value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+@mixin text-shadow($shadow: 1px 1px rgba(0, 0, 0, .15)) {
+	-webkit-text-shadow: $shadow;
+	-moz-text-shadow: $shadow;
+	text-shadow: $shadow;
+}
+
+@mixin box-shadow($shadow: 0 2px 8px -1px rgba(0, 0, 0, .25)) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+@mixin rounded($radius: 4px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin animation($animation: all 160ms ease-in-out) {
+	-webkit-animation: $animation;
+	-moz-animation: $animation;
+	-ms-animation: $animation;
+	-o-animation: $animation;
+	animation: $animation;
+}
+
+@mixin transition($transition: all 180ms ease-in-out) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transition2($transition, $transition2:0) {
+	-webkit-transition: $transition, $transition2;
+	-moz-transition: $transition, $transition2;
+	-ms-transition: $transition, $transition2;
+	-o-transition: $transition, $transition2;
+	transition: $transition, $transition2;
+}
+
+@mixin transition3($transition, $transition2:0, $transition3:0) {
+	-webkit-transition: $transition, $transition2, $transition3;
+	-moz-transition: $transition, $transition2, $transition3;
+	-ms-transition: $transition, $transition2, $transition3;
+	-o-transition: $transition, $transition2, $transition3;
+	transition: $transition, $transition2, $transition3;
+}
+
+@mixin transform($transform, $origin: center) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+	// -webkit-transform-origin: $origin;
+	// -moz-transform-origin: $origin;
+	// -ms-transform-origin: $origin;
+	// -o-transform-origin: $origin;
+	// transform-origin: $origin;
+}
+
+@mixin transform-origin($transform) {
+	-webkit-transform-origin: $transform;
+	-moz-transform-origin: $transform;
+	-ms-transform-origin: $transform;
+	-o-transform-origin: $transform;
+	transform-origin: $transform;
+}
+
+@mixin opacity($opacity: .5) {
+	-webkit-opacity: $opacity;
+	-moz-opacity: $opacity;
+	opacity: $opacity;
+}
+
+@mixin user-select($option: none) {
+	-webkit-user-select: $option;
+	/* Chrome all / Safari all */
+	-moz-user-select: $option;
+	/* Firefox all */
+	-ms-user-select: $option;
+	/* IE 10+ */
+	user-select: $option;
+}
+
+@mixin flexbox() {
+	display: flex;
+	flex: 0 1 auto;
+	align-items: center;
+}
+
+@mixin flex($values) {
+	flex: $values;
+}
+
+@mixin svg-responsive ($width: 1, $height: 1) {
+	$padding-bottom: percentage($height/$width);
+	padding-bottom: $padding-bottom;
+	width: 100%;
+}
+
+/* 
+  ** Animation
+  ** ================================
+  */
+// @keyframes fadeIn {
+// 	0% {
+// 		//display: none;
+// 		@include opacity(0);
+// 	}
+// 	1% {
+// 		//display: block;
+// 		@include opacity(0);
+// 	}
+// 	100% {
+// 		//display: block;
+// 		@include opacity(1);
+// 	}
+// }
