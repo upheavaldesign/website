@@ -68,6 +68,40 @@ module.exports = function (grunt) {
             }
         },
 
+        svg_sprite: {
+            general: {
+                // Target basics
+                expand: true,
+                cwd: assets + 'gfx/svg/',
+                src: ['**/*.svg'],
+                dest: '',
+
+                // Target options
+                options: {
+                    mode: {
+                        symbol: { // Activate the «symbol» mode
+                            sprite: path + '/' + assets + 'gfx/sprite.svg',
+                            layout: 'packed',
+                            prefix: '.', // Remove the automatic prefix
+                            dimensions: '%s', // Remove the '-dims' suffix
+                            bust: false,
+                            // render: {
+                            //   scss: { // Activate Sass output (with default options)
+                            //     template: 'grunt/sass/template-sprite.scss',
+                            //     dest: path + '/grunt/sass/_sprite.scss'
+                            //   }
+                            // },
+                            shape: {
+                                id: {
+                                    generator: "%s" // CSS classes will have this
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
         imagemin: {
             dynamic: {
                 options: {
@@ -195,6 +229,7 @@ module.exports = function (grunt) {
     grunt.registerTask('local', "Build local resources.", function () {
         grunt.task.run('clean');
         grunt.task.run('imagemin');
+        grunt.task.run('svg_sprite');
 
         /* compile scripts */
         grunt.task.run('concat');
@@ -209,6 +244,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', "Build production output.", function () {
         grunt.task.run('clean');
         grunt.task.run('imagemin:dynamic');
+        grunt.task.run('svg_sprite');
 
         /* process production versions */
         grunt.task.run('concat');
@@ -222,11 +258,12 @@ module.exports = function (grunt) {
 
         /* add version serial to resource tags */
         grunt.task.run('cachebreaker');
-    });   
+    });
 
     grunt.registerTask('images', "Process Images and SVGs", function () {
         grunt.task.run('clean');
         grunt.task.run('imagemin:dynamic');
+        grunt.task.run('svg_sprite');
     });
 
     grunt.registerTask('version', "Set Version", function () {
